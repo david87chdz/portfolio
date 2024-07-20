@@ -25,5 +25,5 @@ export function useTheme() {
     document.body.className = theme;
   }, [theme]);
 
-  return [theme, toggleTheme];
+  return [toggleTheme];
 }
