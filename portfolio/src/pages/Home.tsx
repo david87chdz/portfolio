@@ -5,6 +5,7 @@ import { Social } from "../components/Social";
 import { Developer } from "../components/PortfolioCode";
 import { Description } from "../components/Description";
 import { Image } from "../components/Image";
+import { Skills } from "../components/Skills"
 export function Home() {
     return (
         <div>
@@ -16,6 +17,7 @@ export function Home() {
       <Social/>
       <Contact />
       <Proyects />
+      <Skills />
       <Link to="/projects">Proyectos</Link>
         </div>
     );

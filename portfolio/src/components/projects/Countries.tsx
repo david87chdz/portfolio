@@ -3,7 +3,7 @@ import { FaReact } from "react-icons/fa";
 export function Countries() {
   return (
     <div>
-        <h1>Countries</h1>
+        <h3>Countries</h3>
         <button>
             <a href="">Ver código</a>
         </button>
@@ -14,7 +14,7 @@ export function Countries() {
         </p>
         <img src="https://via.placeholder.com/600/1.jpg" alt="" />
         <div className="skills">
-            <h2>Skills</h2>
+            <h4>Skills</h4>
             <ul>
                 <li>React <FaReact /></li>
             </ul>

@@ -7,7 +7,7 @@ import { SiExpress } from "react-icons/si";
 export function Cvitae () {
    return (
     <div>
-         <h1>Mi Currículum Vitae</h1>
+         <h3>Mi Currículum Vitae</h3>
     <button>
             <a href="https://github.com/david87chdz/cvAngular" target="_blank">Ver código</a>
         </button>
@@ -17,7 +17,7 @@ export function Cvitae () {
         </p>
         <img src="https://via.placeholder.com/600/1.jpg" alt="" />
         <div className="skills">
-            <h2>Skills</h2>
+            <h4>Skills</h4>
             <ul>
                 <li>Angular 17 <FaAngular/></li>
                 <li>Node.js <FaNode /></li>

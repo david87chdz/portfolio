@@ -8,7 +8,7 @@ import { SiSpringboot } from "react-icons/si";
 export function EligiendoUnFuturo() {
   return (
     <div>
-     <h1>Eligiendo un futuro</h1>
+     <h2>Eligiendo un futuro</h2>
         <button>
             <a href="https://github.com/david87chdz/Eligiendo-un-futuro" target="_blank">Ver código</a>
         </button>
@@ -18,7 +18,7 @@ export function EligiendoUnFuturo() {
         </p>
         <img src="https://via.placeholder.com/600/1.jpg" alt="" />
         <div className="skills">
-            <h2>Skills</h2>
+            <h4>Skills</h4>
             <ul>
                 <li>Angular 16 <FaAngular/></li>
                 <li>Node.js <FaNode /></li>
