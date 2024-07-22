@@ -4,28 +4,50 @@ import { FaDocker } from "react-icons/fa";
 import { SiPostgresql } from "react-icons/si";
 import { SiExpress } from "react-icons/si";
 
-export function Cvitae () {
-   return (
-    <div>
-         <h3>Mi Currículum Vitae</h3>
-    <button>
-            <a href="https://github.com/david87chdz/cvAngular" target="_blank">Ver código</a>
-        </button>
-        <p>
-            Currículum personal creado con Angular 
-            Creado con Angular 17, Node.js, Express, Docker y PostgreSql
+export function Cvitae() {
+  return (
+    <div className="bg-white dark:bg-gray-800 shadow-lg rounded-lg overflow-hidden max-w-sm w-full transition-transform transform hover:scale-105">
+      <img
+        src="https://via.placeholder.com/300/1.jpg"
+        alt="Profile"
+        className="w-full h-48 object-cover"
+      />
+      <div className="p-6">
+        <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-gray-100">Mi Currículum Vitae</h3>
+        <a
+          href="https://github.com/david87chdz/cvAngular"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors mb-4 text-center"
+        >
+          Ver código
+        </a>
+        <p className="text-gray-700 dark:text-gray-300 mb-4">
+          Currículum personal creado con Angular
+          <br />
+          Creado con Angular 17, Node.js, Express, Docker y PostgreSQL
         </p>
-        <img src="https://via.placeholder.com/600/1.jpg" alt="" />
-        <div className="skills">
-            <h4>Skills</h4>
-            <ul>
-                <li>Angular 17 <FaAngular/></li>
-                <li>Node.js <FaNode /></li>
-                <li>Express <SiExpress /></li>
-                <li>Docker <FaDocker /></li>
-                <li>PostgreSql <SiPostgresql /></li>
-            </ul>
+        <div>
+          <h4 className="text-lg font-semibold mb-3 text-gray-900 dark:text-gray-100">Skills</h4>
+          <ul className="list-disc list-inside pl-5 space-y-2">
+            <li className="flex items-center text-gray-700 dark:text-gray-300">
+              Angular 17 <FaAngular className="ml-2 text-red-600" />
+            </li>
+            <li className="flex items-center text-gray-700 dark:text-gray-300">
+              Node.js <FaNode className="ml-2 text-green-600" />
+            </li>
+            <li className="flex items-center text-gray-700 dark:text-gray-300">
+              Express <SiExpress className="ml-2 text-gray-600" />
+            </li>
+            <li className="flex items-center text-gray-700 dark:text-gray-300">
+              Docker <FaDocker className="ml-2 text-blue-600" />
+            </li>
+            <li className="flex items-center text-gray-700 dark:text-gray-300">
+              PostgreSQL <SiPostgresql className="ml-2 text-blue-700" />
+            </li>
+          </ul>
         </div>
+      </div>
     </div>
-   );
+  );
 }

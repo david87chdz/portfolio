@@ -5,30 +5,57 @@ import { FaDocker } from "react-icons/fa";
 import { SiMysql } from "react-icons/si";
 import { SiExpress } from "react-icons/si";
 import { SiSpringboot } from "react-icons/si";
+
 export function EligiendoUnFuturo() {
   return (
-    <div>
-     <h2>Eligiendo un futuro</h2>
-        <button>
-            <a href="https://github.com/david87chdz/Eligiendo-un-futuro" target="_blank">Ver código</a>
-        </button>
-        <p>
-            Proyecto final de ciclo 
-            Creado con Angular 16, Node.js, Express, Java17, Spring Boot, Docker y MySQL
+    <div className="bg-white dark:bg-gray-800 shadow-lg rounded-lg overflow-hidden max-w-sm w-full transition-transform transform hover:scale-105">
+      <img
+        src="https://via.placeholder.com/300/1.jpg"
+        alt="Project"
+        className="w-full h-48 object-cover"
+      />
+      <div className="p-6">
+        <h2 className="text-2xl font-bold mb-4 text-gray-900 dark:text-gray-100">Eligiendo un futuro</h2>
+        <a
+          href="https://github.com/david87chdz/Eligiendo-un-futuro"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors mb-4 text-center"
+        >
+          Ver código
+        </a>
+        <p className="text-gray-700 dark:text-gray-300 mb-4">
+          Proyecto final de ciclo
+          <br />
+          Creado con Angular 16, Node.js, Express, Java 17, Spring Boot, Docker y MySQL
         </p>
-        <img src="https://via.placeholder.com/600/1.jpg" alt="" />
-        <div className="skills">
-            <h4>Skills</h4>
-            <ul>
-                <li>Angular 16 <FaAngular/></li>
-                <li>Node.js <FaNode /></li>
-                <li>Express <SiExpress /></li>
-                <li>Java17 <FaJava /></li>
-                <li>Spring Boot <SiSpringboot /></li>
-                <li>Docker <FaDocker /></li>
-                <li>MySQL <SiMysql /></li>
-            </ul>
+        <div>
+          <h4 className="text-lg font-semibold mb-3 text-gray-900 dark:text-gray-100">Skills</h4>
+          <ul className="list-disc list-inside pl-5 space-y-2">
+            <li className="flex items-center text-gray-700 dark:text-gray-300">
+              Angular 16 <FaAngular className="ml-2 text-red-600" />
+            </li>
+            <li className="flex items-center text-gray-700 dark:text-gray-300">
+              Node.js <FaNode className="ml-2 text-green-600" />
+            </li>
+            <li className="flex items-center text-gray-700 dark:text-gray-300">
+              Express <SiExpress className="ml-2 text-gray-600" />
+            </li>
+            <li className="flex items-center text-gray-700 dark:text-gray-300">
+              Java 17 <FaJava className="ml-2 text-blue-600" />
+            </li>
+            <li className="flex items-center text-gray-700 dark:text-gray-300">
+              Spring Boot <SiSpringboot className="ml-2 text-green-500" />
+            </li>
+            <li className="flex items-center text-gray-700 dark:text-gray-300">
+              Docker <FaDocker className="ml-2 text-blue-600" />
+            </li>
+            <li className="flex items-center text-gray-700 dark:text-gray-300">
+              MySQL <SiMysql className="ml-2 text-blue-700" />
+            </li>
+          </ul>
         </div>
+      </div>
     </div>
   );
 }

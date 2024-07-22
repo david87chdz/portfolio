@@ -1,24 +1,23 @@
-import { Link } from "react-router-dom";
-import { Proyects } from "../components/Proyects";
-import { Contact } from "../components/Contact";
-import { Social } from "../components/Social";
-import { Developer } from "../components/PortfolioCode";
-import { Description } from "../components/Description";
-import { Image } from "../components/Image";
-import { Skills } from "../components/Skills"
+import { Image } from '../components/Image';
+import { Description } from '../components/Description';
+import { Developer } from '../components/PortfolioCode';
+import { Social } from '../components/Social';
+import { Contact } from '../components/Contact';
+import { Proyects } from '../components/Proyects';
+import { Skills } from '../components/Skills';
+
 export function Home() {
-    return (
-        <div>
-            <h1>David Cerezo</h1>
-            <p>Desarrollador web</p>
-    <Image />
-      <Description />
-      <Developer />
-      <Social/>
-      <Contact />
-      <Proyects />
-      <Skills />
-      <Link to="/projects">Proyectos</Link>
-        </div>
-    );
+  return (
+    <main>
+      <section className="flex flex-col items-center">
+        <Image />
+        <Description />
+        <Developer />
+        <Social />
+        <Contact />
+        <Proyects />
+        <Skills />
+      </section>
+    </main>
+  );
 }

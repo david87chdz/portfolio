@@ -1,3 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Estilos globales para el diseño y la tipografía */
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -22,19 +27,34 @@ a:hover {
   color: #535bf2;
 }
 
+/* Estilos del body y root */
 body {
   margin: 0;
   display: flex;
-  place-items: center;
+  align-items: center;
+  justify-content: center;
   min-width: 320px;
   min-height: 100vh;
+  background-color: #242424; /* Color de fondo oscuro para el tema oscuro */
 }
 
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px; /* Ajusta el valor según el ancho deseado */
+  padding: 16px; /* Ajusta el padding según sea necesario */
+}
+
+/* Estilos de encabezados */
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
 
+/* Estilos para botones */
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -54,15 +74,27 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+/* Estilos para el modo claro */
 @media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
-    background-color: #ffffff;
+    color: #333333; /* Texto más oscuro para el tema claro */
+    background-color: #f9f9f9; /* Fondo más claro */
+  }
+  a {
+    color: #007bff; /* Color de los enlaces más visible */
   }
   a:hover {
-    color: #747bff;
+    color: #0056b3; /* Color de los enlaces al pasar el cursor */
   }
   button {
-    background-color: #f9f9f9;
+    background-color: #ffffff; /* Fondo de botón claro */
+    border-color: #cccccc; /* Borde de botón claro */
+    color: #333333; /* Texto del botón oscuro para contraste */
+  }
+  button:hover {
+    border-color: #007bff; /* Borde del botón al pasar el cursor */
+  }
+  body {
+    background-color: #f9f9f9; /* Fondo de cuerpo claro */
   }
 }

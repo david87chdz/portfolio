@@ -1,6 +1,6 @@
 import { IoLogoJavascript } from "react-icons/io5";
 import { SiTypescript } from "react-icons/si";
-import { FaJava } from "react-icons/fa";
+import { FaJava } from "react-icons/fa6";
 import { FaPhp } from "react-icons/fa6";
 import { FaHtml5 } from "react-icons/fa6";
 import { FaCss3Alt } from "react-icons/fa";
@@ -34,70 +34,180 @@ import { FaNpm } from "react-icons/fa6";
 import { DiComposer } from "react-icons/di";
 import { TbBrandVite } from "react-icons/tb";
 
-export function Skills(){
-    return(
-        <div>
-            <h2>Skills</h2>
-            <h4>Lenguajes de programación:</h4>
-            <ul>
-                <li>JavaScript <IoLogoJavascript/></li>
-                <li>Typescript <SiTypescript/></li>
-                <li>Java <FaJava/></li>
-                <li>Php <FaPhp/></li>
-            </ul>
-            <h4>Lenguajes de marcado y estilos:</h4>
-            <ul>
-                <li>HTML5 <FaHtml5/></li>
-                <li>CSS3 <FaCss3Alt/></li>
-                <li>Sass <FaSass/></li>
-            </ul>
-            <h4>Frameworks y bibliotecas Frontend:</h4>
-            <ul>
-                <li>Angular <FaAngular/></li>
-                <li>React <FaReact/></li>
-                <li>Bootstrap <FaBootstrap/></li>
-                <li>Taildwind <SiTailwindcss/></li>
-            </ul>
-            <h4>Tecnologias y frameworks Backend:</h4>
-            <ul>
-                <li>Spring Boot <SiSpringboot/></li>
-                <li>Symfony <FaSymfony/></li>
-                <li>NodeJS <FaNode/></li>
-                <li>Express <SiExpress/></li>
-                <li>Hibernate <SiHibernate /></li>
-                <li>Doctrine <DiDoctrine /></li>
-            </ul>
-            <h4>Sistemas de gestión de basdes de datos:</h4>
-            <h5>Relacionales:</h5>
-            <ul>
-                <li>MySql <SiMysql /></li>
-                <li>PostgreSql <SiPostgresql /></li>
-                <li>MariaDb <SiMariadb /></li>
-                <li>Oracle <SiOracle /></li>
-            </ul>
-            <h5>No relacionales</h5>
-            <ul>
-                <li>MongoDb <SiMongodb /></li>
-            </ul>
-            <h4>Crontrol de versiones</h4>
-            <ul>
-                <li>Git <FaGitAlt /></li>
-                <li>GitHub <FaGithub /></li>
-                <li>GitLab <FiGitlab /></li>
-            </ul>
-            <h4>Herramientas de desarrollo:</h4>
-            <ul>
-                <li>Visual Studio Code <SiVisualstudiocode /></li>
-                <li>IntelliJ IDEA <SiIntellijidea /></li>
-                <li>Eclipse <SiEclipseide /></li>
-                <li>Postman <SiPostman /></li>
-                <li>Docker <FaDocker /></li>
-                <li>AWS <FaAws /></li>
-                <li>Linux <FaLinux /></li>
-                <li>Npm <FaNpm /></li>
-                <li>Composer <DiComposer /></li>
-                <li>Vite <TbBrandVite /></li>
-            </ul>
+export function Skills() {
+    return (
+      <div className="p-6 bg-gray-100 min-h-screen flex flex-col items-center">
+        <h1 className="text-3xl font-bold mb-6 text-gray-900 dark:text-gray-100">⚙️ Skills</h1>
+        <div className="flex flex-wrap gap-6 justify-center">
+          
+          {/* Tarjeta Lenguajes de programación */}
+          <div className="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-4 w-full sm:w-80">
+            <h2 className="text-xl font-semibold mb-4 text-gray-900 dark:text-gray-100">
+              Lenguajes de programación
+            </h2>
+            <div className="grid grid-cols-2 gap-4">
+              <div className="flex items-center justify-center">
+                <IoLogoJavascript className="text-yellow-500 text-6xl border border-gray-300 dark:border-gray-600 rounded-full p-4" />
+              </div>
+              <div className="flex items-center justify-center">
+                <SiTypescript className="text-blue-500 text-6xl border border-gray-300 dark:border-gray-600 rounded-full p-4" />
+              </div>
+              <div className="flex items-center justify-center">
+                <FaJava className="text-red-600 text-6xl border border-gray-300 dark:border-gray-600 rounded-full p-4" />
+              </div>
+              <div className="flex items-center justify-center">
+                <FaPhp className="text-purple-600 text-6xl border border-gray-300 dark:border-gray-600 rounded-full p-4" />
+              </div>
+            </div>
+          </div>
+  
+          {/* Tarjeta Lenguajes de marcado y estilos */}
+          <div className="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-4 w-full sm:w-80">
+            <h2 className="text-xl font-semibold mb-4 text-gray-900 dark:text-gray-100">
+              Lenguajes de marcado y estilos
+            </h2>
+            <div className="grid grid-cols-2 gap-4">
+              <div className="flex items-center justify-center">
+                <FaHtml5 className="text-orange-600 text-6xl border border-gray-300 dark:border-gray-600 rounded-full p-4" />
+              </div>
+              <div className="flex items-center justify-center">
+                <FaCss3Alt className="text-blue-500 text-6xl border border-gray-300 dark:border-gray-600 rounded-full p-4" />
+              </div>
+              <div className="flex items-center justify-center">
+                <FaSass className="text-pink-500 text-6xl border border-gray-300 dark:border-gray-600 rounded-full p-4" />
+              </div>
+            </div>
+          </div>
+  
+          {/* Tarjeta Frameworks y bibliotecas Frontend */}
+          <div className="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-4 w-full sm:w-80">
+            <h2 className="text-xl font-semibold mb-4 text-gray-900 dark:text-gray-100">
+              Frameworks y bibliotecas Frontend
+            </h2>
+            <div className="grid grid-cols-2 gap-4">
+              <div className="flex items-center justify-center">
+                <FaAngular className="text-red-600 text-6xl border border-gray-300 dark:border-gray-600 rounded-full p-4" />
+              </div>
+              <div className="flex items-center justify-center">
+                <FaReact className="text-blue-600 text-6xl border border-gray-300 dark:border-gray-600 rounded-full p-4" />
+              </div>
+              <div className="flex items-center justify-center">
+                <FaBootstrap className="text-purple-600 text-6xl border border-gray-300 dark:border-gray-600 rounded-full p-4" />
+              </div>
+              <div className="flex items-center justify-center">
+                <SiTailwindcss className="text-blue-400 text-6xl border border-gray-300 dark:border-gray-600 rounded-full p-4" />
+              </div>
+            </div>
+          </div>
+  
+          {/* Tarjeta Tecnologías y frameworks Backend */}
+          <div className="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-4 w-full sm:w-80">
+            <h2 className="text-xl font-semibold mb-4 text-gray-900 dark:text-gray-100">
+              Tecnologías y frameworks Backend
+            </h2>
+            <div className="grid grid-cols-2 gap-4">
+              <div className="flex items-center justify-center">
+                <SiSpringboot className="text-green-500 text-6xl border border-gray-300 dark:border-gray-600 rounded-full p-4" />
+              </div>
+              <div className="flex items-center justify-center">
+                <FaSymfony className="text-black text-6xl border border-gray-300 dark:border-gray-600 rounded-full p-4" />
+              </div>
+              <div className="flex items-center justify-center">
+                <FaNode className="text-green-600 text-6xl border border-gray-300 dark:border-gray-600 rounded-full p-4" />
+              </div>
+              <div className="flex items-center justify-center">
+                <SiExpress className="text-gray-600 text-6xl border border-gray-300 dark:border-gray-600 rounded-full p-4" />
+              </div>
+              <div className="flex items-center justify-center">
+                <SiHibernate className="text-purple-600 text-6xl border border-gray-300 dark:border-gray-600 rounded-full p-4" />
+              </div>
+              <div className="flex items-center justify-center">
+                <DiDoctrine className="text-blue-600 text-6xl border border-gray-300 dark:border-gray-600 rounded-full p-4" />
+              </div>
+            </div>
+          </div>
+  
+          {/* Tarjeta Sistemas de gestión de bases de datos */}
+          <div className="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-4 w-full sm:w-80">
+            <h2 className="text-xl font-semibold mb-4 text-gray-900 dark:text-gray-100">
+              Sistemas de gestión de bases de datos
+            </h2>
+            <div className="grid grid-cols-2 gap-4">
+              <div className="flex items-center justify-center">
+                <SiMysql className="text-blue-600 text-6xl border border-gray-300 dark:border-gray-600 rounded-full p-4" />
+              </div>
+              <div className="flex items-center justify-center">
+                <SiPostgresql className="text-blue-700 text-6xl border border-gray-300 dark:border-gray-600 rounded-full p-4" />
+              </div>
+              <div className="flex items-center justify-center">
+                <SiMariadb className="text-blue-600 text-6xl border border-gray-300 dark:border-gray-600 rounded-full p-4" />
+              </div>
+              <div className="flex items-center justify-center">
+                <SiOracle className="text-orange-600 text-6xl border border-gray-300 dark:border-gray-600 rounded-full p-4" />
+              </div>
+              <div className="flex items-center justify-center">
+                <SiMongodb className="text-green-500 text-6xl border border-gray-300 dark:border-gray-600 rounded-full p-4" />
+              </div>
+            </div>
+          </div>
+  
+          {/* Tarjeta Control de versiones */}
+          <div className="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-4 w-full sm:w-80">
+            <h2 className="text-xl font-semibold mb-4 text-gray-900 dark:text-gray-100">
+              Control de versiones
+            </h2>
+            <div className="grid grid-cols-3 gap-4">
+              <div className="flex items-center justify-center">
+                <FaGitAlt className="text-orange-600 text-6xl border border-gray-300 dark:border-gray-600 rounded-full p-4" />
+              </div>
+              <div className="flex items-center justify-center">
+                <FaGithub className="text-gray-900 text-6xl border border-gray-300 dark:border-gray-600 rounded-full p-4" />
+              </div>
+              <div className="flex items-center justify-center">
+                <FiGitlab className="text-orange-600 text-6xl border border-gray-300 dark:border-gray-600 rounded-full p-4" />
+              </div>
+            </div>
+          </div>
+  
+          {/* Tarjeta Herramientas de desarrollo */}
+          <div className="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-4 w-full sm:w-80">
+            <h2 className="text-xl font-semibold mb-4 text-gray-900 dark:text-gray-100">
+              Herramientas de desarrollo
+            </h2>
+            <div className="grid grid-cols-3 gap-4">
+              <div className="flex items-center justify-center">
+                <SiVisualstudiocode className="text-blue-600 text-6xl border border-gray-300 dark:border-gray-600 rounded-full p-4" />
+              </div>
+              <div className="flex items-center justify-center">
+                <SiIntellijidea className="text-gray-900 text-6xl border border-gray-300 dark:border-gray-600 rounded-full p-4" />
+              </div>
+              <div className="flex items-center justify-center">
+                <SiEclipseide className="text-gray-700 text-6xl border border-gray-300 dark:border-gray-600 rounded-full p-4" />
+              </div>
+              <div className="flex items-center justify-center">
+                <SiPostman className="text-orange-600 text-6xl border border-gray-300 dark:border-gray-600 rounded-full p-4" />
+              </div>
+              <div className="flex items-center justify-center">
+                <FaDocker className="text-blue-600 text-6xl border border-gray-300 dark:border-gray-600 rounded-full p-4" />
+              </div>
+              <div className="flex items-center justify-center">
+                <FaAws className="text-yellow-600 text-6xl border border-gray-300 dark:border-gray-600 rounded-full p-4" />
+              </div>
+              <div className="flex items-center justify-center">
+                <FaLinux className="text-black text-6xl border border-gray-300 dark:border-gray-600 rounded-full p-4" />
+              </div>
+              <div className="flex items-center justify-center">
+                <FaNpm className="text-red-600 text-6xl border border-gray-300 dark:border-gray-600 rounded-full p-4" />
+              </div>
+              <div className="flex items-center justify-center">
+                <DiComposer className="text-purple-600 text-6xl border border-gray-300 dark:border-gray-600 rounded-full p-4" />
+              </div>
+              <div className="flex items-center justify-center">
+                <TbBrandVite className="text-yellow-600 text-6xl border border-gray-300 dark:border-gray-600 rounded-full p-4" />
+              </div>
+            </div>
+          </div>
         </div>
-    )
-}
+      </div>
+    );
+  }

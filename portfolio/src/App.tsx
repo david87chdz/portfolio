@@ -1,45 +1,33 @@
-import { useState } from 'react'
-
-
-import { useVisits } from './hooks/useVisits.ts'
-import { useTheme } from './hooks/useTheme.ts'
-
-import './App.css'
-
-
-import { Link, Route, Routes } from 'react-router-dom'
-import { Projects as ProjectsPage } from './pages/Projects.tsx'
-import { Home} from './pages/Home.tsx'
-import { Curriculum } from './pages/Curriculum.tsx'
-import { Blog } from './pages/Blog.tsx'
-import { Nav } from './components/shared/Nav.tsx'
+import { Routes, Route } from 'react-router-dom';
+import { Nav } from './components/shared/Nav';
+import { Footer } from './components/shared/Footer';
+import { Home } from './pages/Home';
+import { Projects as ProjectsPage } from './pages/Projects';
+import { Curriculum } from './pages/Curriculum';
+import { Blog } from './pages/Blog';
+import { useVisits } from './hooks/useVisits';
+import { useTheme } from './hooks/useTheme';
+import './App.css';
 
 function App() {
-  const { visits } = useVisits()
-  const [toggleTheme] = useTheme();
+  const { visits } = useVisits();
+ 
+
   return (
-   <div>
-    <Nav />
-    <h1>
-    class Portfolio &#123; 
-    </h1>
-      <p> Número de visitas { visits } </p>
-      <button onClick={ toggleTheme }>Cambiar el tema</button>
-
-    <h1>
-    &#125;
-    </h1>
-
-    <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/projects" element={<ProjectsPage />} />
-        <Route path="/cv" element={<Curriculum />} />
-        <Route path="/blog" element={<Blog />} />
-    </Routes>
-
-   </div>
-
-  )
+    <div>
+      <Nav />
+      <main className="p-4 max-w-screen-lg mx-auto flex-1 md:p-6">
+        <p className="text-center text-lg mb-4">Número de visitas: {visits}</p>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/projects" element={<ProjectsPage />} />
+          <Route path="/cv" element={<Curriculum />} />
+          <Route path="/blog" element={<Blog />} />
+        </Routes>
+      </main>
+      <Footer />
+    </div>
+  );
 }
 
-export default App
+export default App;
