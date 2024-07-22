@@ -6,7 +6,7 @@ import { Projects as ProjectsPage } from './pages/Projects';
 import { Curriculum } from './pages/Curriculum';
 import { Blog } from './pages/Blog';
 import { useVisits } from './hooks/useVisits';
-import { useTheme } from './hooks/useTheme';
+//import { useTheme } from './hooks/useTheme';
 import './App.css';
 
 function App() {

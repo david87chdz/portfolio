@@ -44,7 +44,7 @@ export const Developer = () => {
   `;
 
   return (
-    <div className="p-4 md:p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md max-w-full sm:max-w-xl md:max-w-2xl lg:max-w-4xl mx-auto">
+    <div className="p-4 md:p-6 bg-white dark:bg-gray-800 rounded-2xl shadow-md max-w-full sm:max-w-xl md:max-w-2xl lg:max-w-4xl mx-auto">
       <SyntaxHighlighter language="javascript" style={docco} className="text-xs sm:text-sm md:text-base">
         {codeString}
       </SyntaxHighlighter>

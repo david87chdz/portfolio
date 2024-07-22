@@ -1,21 +1,21 @@
+import { Document, Page, pdfjs } from 'react-pdf';
+import 'react-pdf/dist/esm/Page/AnnotationLayer.css'; // Importa los estilos necesarios
+
+// Configura la localización del worker de pdfjs
+pdfjs.GlobalWorkerOptions.workerSrc = '/pdfjs/pdf.worker.min.mjs';
+
 export function Curriculum() {
-    return (
-        <div>
-            <h2>Curriculum</h2>
-            <p>David Cerezo</p>
-            <p>Desarrollador Frontend</p>
-            <p>Formación</p>
-            <p>Grado en Ingeniería Informática</p>
-            <p>Experiencia</p>
-            <p>Desarrollador Frontend en El Corte Inglés</p>
-            <p>Desarrollador Frontend en Indra</p>
-            <p>Desarrollador Frontend en Everis</p>
-            <p>Conocimientos</p>
-            <p>HTML</p>
-            <p>CSS</p>
-            <p>JavaScript</p>
-            <p>React</p>
-            <p>Vue</p>
-        </div>
-    );
+  // Aquí puedes reemplazar la URL por la ubicación real de tu archivo PDF
+  const pdfUrl = "/curriculum.pdf";
+
+  return (
+    <div className="pdf-viewer">
+      <Document
+        file={pdfUrl}
+        onLoadSuccess={({ numPages }) => console.log(`PDF loaded, number of pages: ${numPages}`)}
+      >
+        <Page pageNumber={1} />
+      </Document>
+    </div>
+  );
 }

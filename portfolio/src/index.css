@@ -2,99 +2,137 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Estilos globales para el diseño y la tipografía */
+/* Estilos Base */
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  --background-color-light: #f5f5f5;
+  --background-color-dark: #121212;
+  --text-color-light: #000000;
+  --text-color-dark: #e0e0e0;
+  --primary-color: #1e90ff;
+  --secondary-color: #ff5722;
+  --nav-background-light: #ffffff;
+  --nav-background-dark: #1e1e1e;
+  --footer-background-light: #ffffff;
+  --footer-background-dark: #1e1e1e;
+  --card-background-light: #ffffff;
+  --card-background-dark: #333333;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-/* Estilos del body y root */
+/* Estilos Globales */
 body {
+  /* font-family: 'Fira Code', monospace; */
+  /* font-family: 'JetBrains Mono', monospace; */
+  /* font-family: 'Roboto Mono', monospace; */
+  /* font-family: 'Inconsolata', monospace; */
+  font-family: 'Source Code Pro', monospace;
+  background-color: var(--background-color-light);
+  color: var(--text-color-light);
+  transition: background-color 0.3s, color 0.3s;
   margin: 0;
+  padding: 0;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 320px;
+  flex-direction: column;
   min-height: 100vh;
-  background-color: #242424; /* Color de fondo oscuro para el tema oscuro */
 }
 
-#root {
+/* Modo oscuro */
+body.dark {
+  background-color: var(--background-color-dark);
+  color: var(--text-color-dark);
+}
+
+body.dark section {
+  background-color: var(--card-background-dark);
+  color: var(--text-color-dark);
+}
+
+/* Main */
+main {
+  padding: 3rem 1rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  width: 100%;
-  max-width: 1200px; /* Ajusta el valor según el ancho deseado */
-  padding: 16px; /* Ajusta el padding según sea necesario */
+  gap: 2rem;
+  flex: 1;
 }
 
-/* Estilos de encabezados */
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-/* Estilos para botones */
+/* Botones */
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.375rem;
+  background-color: var(--primary-color);
+  color: #ffffff;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
-/* Estilos para el modo claro */
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #333333; /* Texto más oscuro para el tema claro */
-    background-color: #f9f9f9; /* Fondo más claro */
+button:hover {
+  background-color: var(--secondary-color);
+  transform: scale(1.05);
+}
+
+/* Sección */
+section {
+  width: 100%;
+  max-width: 1200px;
+  padding: 2rem;
+  background-color: var(--card-background-light);
+  border-radius: 0.375rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Logo */
+.logo {
+  height: 5em;
+  transition: transform 0.3s, filter 0.3s;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em var(--primary-color));
+  transform: scale(1.1);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
   }
-  a {
-    color: #007bff; /* Color de los enlaces más visible */
+  to {
+    transform: rotate(360deg);
   }
-  a:hover {
-    color: #0056b3; /* Color de los enlaces al pasar el cursor */
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
   }
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 640px) {
+  main {
+    padding: 1rem;
+  }
+
+  section {
+    padding: 1rem;
+  }
+
   button {
-    background-color: #ffffff; /* Fondo de botón claro */
-    border-color: #cccccc; /* Borde de botón claro */
-    color: #333333; /* Texto del botón oscuro para contraste */
+    padding: 0.5rem;
+    font-size: 0.875rem;
   }
-  button:hover {
-    border-color: #007bff; /* Borde del botón al pasar el cursor */
+
+  .logo {
+    height: 4em;
   }
-  body {
-    background-color: #f9f9f9; /* Fondo de cuerpo claro */
+}
+
+@layer utilities {
+  .rotate-y-360 {
+    transform: rotateY(360deg);
   }
 }

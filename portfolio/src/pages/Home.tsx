@@ -10,13 +10,29 @@ export function Home() {
   return (
     <main>
       <section className="flex flex-col items-center">
-        <Image />
-        <Description />
-        <Developer />
-        <Social />
-        <Contact />
-        <Proyects />
-        <Skills />
+        <div className="space-y-6 w-full flex flex-col items-center">
+          <div className="my-6 w-full flex justify-center rounded-2xl shadow-md">
+            <Image />
+          </div>
+          <div className="my-6 w-full flex justify-center rounded-2xl shadow-md">
+            <Description />
+          </div>
+          <div className="my-6 w-full flex justify-center rounded-2xl shadow-md">
+            <Developer />
+          </div>
+          <div className="my-6 w-full flex justify-center rounded-2xl shadow-md">
+            <Contact />
+          </div>
+          <div className="my-6 w-full flex justify-center rounded-2xl shadow-md">
+            <Social />
+          </div>
+          <div className="my-6 w-full flex justify-center rounded-2xl shadow-md">
+            <Proyects />
+          </div>
+          <div className="my-6 w-full flex justify-center rounded-2xl shadow-md">
+            <Skills />
+          </div>
+        </div>
       </section>
     </main>
   );
