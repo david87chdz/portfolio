@@ -4,8 +4,8 @@ import { Document, Page, pdfjs } from 'react-pdf';
 pdfjs.GlobalWorkerOptions.workerSrc = `/pdfjs/pdf.worker.min.mjs`;
 
 export function PDFViewer({ fileUrl }: { fileUrl: string }) {
-  const [numPages, setNumPages] = useState(1);
-  const [pageNumber, setPageNumber] = useState(1);
+  const [, setNumPages] = useState(1);
+  const [pageNumber, ] = useState(1);
   const containerRef = useRef<HTMLDivElement>(null);
 
   const onDocumentLoadSuccess = ({ numPages }: { numPages: number }) => {
