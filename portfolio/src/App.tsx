@@ -18,7 +18,7 @@ function App() {
   return (
     <div>
       <Nav />
-      <main className="p-4 max-w-screen-lg mx-auto flex-1 md:p-6">
+      <main className="p-4 max-w-screen-xl mx-auto flex-1 md:p-6">
         <p className="text-center text-lg mb-4">Número de visitas: {visits}</p>
         <Routes>
           <Route path="/" element={<Home />} />

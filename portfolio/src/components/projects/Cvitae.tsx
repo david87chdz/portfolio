@@ -7,11 +7,13 @@ import { SiExpress } from "react-icons/si";
 export function Cvitae() {
   return (
     <div className="bg-white dark:bg-gray-800 shadow-lg rounded-lg overflow-hidden max-w-sm w-full transition-transform transform hover:scale-105">
-      <img
-        src="https://via.placeholder.com/300/1.jpg"
-        alt="Profile"
-        className="w-full h-48 object-cover"
-      />
+      <div className="p-4"> {/* Contenedor para márgenes */}
+        <img
+          src="https://via.placeholder.com/300/1.jpg"
+          alt="Profile"
+          className="w-full h-48 object-cover rounded-md"
+        />
+      </div>
       <div className="p-6">
         <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-gray-100">Mi Currículum Vitae</h3>
         <a
@@ -29,7 +31,7 @@ export function Cvitae() {
         </p>
         <div>
           <h4 className="text-lg font-semibold mb-3 text-gray-900 dark:text-gray-100">Skills</h4>
-          <ul className="list-disc list-inside pl-5 space-y-2">
+          <ul className="grid grid-cols-2 gap-4 list-disc list-inside pl-5">
             <li className="flex items-center text-gray-700 dark:text-gray-300">
               Angular 17 <FaAngular className="ml-2 text-red-600" />
             </li>

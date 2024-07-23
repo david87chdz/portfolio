@@ -4,9 +4,11 @@
 
 /* Estilos Base */
 :root {
-  --background-color-light: #f5f5f5;
-  --background-color-dark: #121212;
-  --text-color-light: #000000;
+  --background-light: #f9fafb; /* Fondo claro con un toque sutil de gris y blanco */
+  --background-dark: #121212; /* Fondo oscuro profundo para el modo oscuro */
+  --background-gradient-light: radial-gradient(circle, rgba(255, 255, 255, 0.9) 20%, rgba(240, 240, 240, 1) 80%);
+  --background-gradient-dark: radial-gradient(circle, rgba(18, 18, 18, 1) 20%, rgba(33, 33, 33, 1) 80%);
+  --text-color-light: #333333;
   --text-color-dark: #e0e0e0;
   --primary-color: #1e90ff;
   --secondary-color: #ff5722;
@@ -15,15 +17,15 @@
   --footer-background-light: #ffffff;
   --footer-background-dark: #1e1e1e;
   --card-background-light: #ffffff;
-  --card-background-dark: #333333;
+  --card-background-dark: #2a2a2a;
 }
 
 /* Estilos Globales */
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: var(--background-color-light);
+  background: var(--background-gradient-light);
   color: var(--text-color-light);
-  transition: background-color 0.3s, color 0.3s;
+  transition: background 0.3s, color 0.3s;
   margin: 0;
   padding: 0;
   display: flex;
@@ -33,16 +35,78 @@ body {
 
 /* Modo oscuro */
 body.dark {
-  background-color: var(--background-color-dark);
+  background: var(--background-gradient-dark);
   color: var(--text-color-dark);
 }
 
-body.dark section {
-  background-color: var(--card-background-dark);
+/* Nav */
+nav {
+  width: 100%;
+  background-color: var(--nav-background-light);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s, color 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+nav.dark {
+  background-color: var(--nav-background-dark);
+}
+
+nav a {
+  color: var(--text-color-light);
+  text-decoration: none;
+  margin: 0 1rem;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: var(--primary-color);
+}
+
+nav.dark a {
   color: var(--text-color-dark);
 }
 
-body.lig
+nav.dark a:hover {
+  color: var(--primary-color);
+}
+
+.nav-toggle {
+  display: none;
+  cursor: pointer;
+  color: var(--text-color-light);
+}
+
+nav.dark .nav-toggle {
+  color: var(--text-color-dark);
+}
+
+.nav-links {
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  nav a {
+    margin: 1rem 0;
+  }
+}
 
 /* Main */
 main {
@@ -54,6 +118,7 @@ main {
   align-items: center;
   gap: 2rem;
   flex: 1;
+  width: 100%;
 }
 
 /* Botones */
@@ -109,7 +174,6 @@ section {
   }
 }
 
-
 @media (max-width: 640px) {
   main {
     padding: 1rem;
@@ -129,30 +193,23 @@ section {
   }
 }
 
-
-
- .pdf-viewer-container {
-  margin: 20px auto;
-  border: 1px solid #ddd;
-  border-radius: 12px;
-  overflow: hidden;
-  background: #f9f9f9;
-  padding: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+/* PDF Viewer */
+.pdf-viewer-container {
+  width: 100%;
+  height: 100vh; /* Ocupa el 100% del alto de la ventana */
+  overflow: auto; /* Permite desplazamiento si es necesario */
   display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  max-width: auto;
-  height: auto; /* Ajusta la altura según tu diseño */
+  justify-content: center; /* Centra horizontalmente el contenido */
+  align-items: center; /* Centra verticalmente el contenido */
+  box-sizing: border-box; /* Asegura que padding y bordes se incluyan en el tamaño total */
+  padding: 10px; /* Opcional: agrega padding para no tener el PDF pegado a los bordes */
 }
 
-.react-pdf__Page {
-  width: 100%;
+.pdf-viewer-container .react-pdf__Page {
+  max-width: 100%;
+  max-height: 100%;
 }
 
-@media (max-width: 768px) {
-  .pdf-viewer-container {
-    height: auto; /* Ajusta la altura para dispositivos móviles */
-  }
-}
+
+
+

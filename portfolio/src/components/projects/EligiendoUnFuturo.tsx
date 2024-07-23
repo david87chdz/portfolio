@@ -9,11 +9,13 @@ import { SiSpringboot } from "react-icons/si";
 export function EligiendoUnFuturo() {
   return (
     <div className="bg-white dark:bg-gray-800 shadow-lg rounded-lg overflow-hidden max-w-sm w-full transition-transform transform hover:scale-105">
-      <img
-        src="https://via.placeholder.com/300/1.jpg"
-        alt="Project"
-        className="w-full h-48 object-cover"
-      />
+      <div className="p-4">
+        <img
+          src="https://via.placeholder.com/300/1.jpg"
+          alt="Project"
+          className="w-full h-48 object-cover rounded-md mb-4 mx-auto" // Añadido margen horizontal y margen inferior
+        />
+      </div>
       <div className="p-6">
         <h2 className="text-2xl font-bold mb-4 text-gray-900 dark:text-gray-100">Eligiendo un futuro</h2>
         <a
@@ -31,7 +33,7 @@ export function EligiendoUnFuturo() {
         </p>
         <div>
           <h4 className="text-lg font-semibold mb-3 text-gray-900 dark:text-gray-100">Skills</h4>
-          <ul className="list-disc list-inside pl-5 space-y-2">
+          <ul className="grid grid-cols-2 gap-4 list-disc list-inside pl-5">
             <li className="flex items-center text-gray-700 dark:text-gray-300">
               Angular 16 <FaAngular className="ml-2 text-red-600" />
             </li>
