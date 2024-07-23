@@ -8,11 +8,11 @@ export function useVisits() {
   
   useEffect(() => {
     if (currentVisits === 0) {
-      localStorage.setItem('visits', 1);
+      localStorage.setItem('visits', '1');
       setVisits(1);
     } else {
       const newCount = parseInt(currentVisits) + 1;
-      localStorage.setItem('visits', newCount);
+      localStorage.setItem('visits', newCount.toString());
       setVisits(newCount);
     }
    }, []);
