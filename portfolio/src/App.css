@@ -4,8 +4,8 @@
 
 /* Estilos Base */
 :root {
-  --background-light: #f9fafb; /* Fondo claro */
-  --background-dark: #121212; /* Fondo oscuro */
+  --background-light: #f9fafb;
+  --background-dark: #121212;
   --background-gradient-light: radial-gradient(circle, rgba(255, 255, 255, 0.9) 20%, rgba(240, 240, 240, 1) 80%);
   --background-gradient-dark: linear-gradient(135deg, #582a788a 0%, #004080 100%);
   --text-color-light: #333333;
@@ -110,11 +110,9 @@ nav.dark .nav-toggle {
 /* Main */
 main {
   padding: 2rem 0;
-  
   display: flex;
   flex-direction: column;
   align-items: center;
-  
   flex: 1;
   width: 100%;
   border-radius: 1em;
@@ -147,13 +145,11 @@ section {
   transition: background-color 0.3s, color 0.3s;
   gap: 1rem;
   margin: 1rem;
-
 }
 
 body.dark section {
-  background: var(--background-gradient-dark); /* Fondo oscuro en modo oscuro */
+  background: var(--background-gradient-dark);
 }
-
 
 /* Logo */
 .logo {
@@ -203,13 +199,13 @@ body.dark section {
 /* PDF Viewer */
 .pdf-viewer-container {
   width: 100%;
-  height: 100vh; /* Ocupa el 100% del alto de la ventana */
-  overflow: auto; /* Permite desplazamiento si es necesario */
+  height: 100vh;
+  overflow: auto;
   display: flex;
-  justify-content: center; /* Centra horizontalmente el contenido */
-  align-items: center; /* Centra verticalmente el contenido */
-  box-sizing: border-box; /* Asegura que padding y bordes se incluyan en el tamaño total */
-  padding: 10px; /* Opcional: agrega padding para no tener el PDF pegado a los bordes */
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 10px;
 }
 
 .pdf-viewer-container .react-pdf__Page {
@@ -221,7 +217,7 @@ body.dark section {
 .reveal {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.2)); /* Gradiente sutil */
+  background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.2));
   transition: opacity 0.3s, transform 0.3s;
 }
 
@@ -232,8 +228,8 @@ body.dark section {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.05); /* Menos oscuro que antes */
-  backdrop-filter: blur(5px); /* Menos desenfoque */
+  background: rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(5px);
   z-index: -1;
 }
 

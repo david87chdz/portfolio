@@ -7,7 +7,7 @@ export function useTheme() {
     if (storedTheme) {
       return storedTheme;
     } else {
-      // If no theme is stored, try to get the user's system preference
+      // Si no hay tema almacenado, intenta obtener la preferencia del sistema del usuario
       return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
     }
   };
@@ -20,10 +20,9 @@ export function useTheme() {
     localStorage.setItem("theme", newTheme);
   };
 
-  
   useEffect(() => {
     document.body.className = theme;
   }, [theme]);
 
-  return [toggleTheme];
+  return [theme, toggleTheme];
 }

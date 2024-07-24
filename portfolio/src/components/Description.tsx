@@ -1,14 +1,18 @@
 import { useTypingEffect } from "../hooks/useTyppingEffect";
+import { useTranslation } from 'react-i18next';
 import reactImage from './../assets/fotoCv.jpeg';
 
 export function Description() {
-  const text = "Después de 17 años de experiencia en diversos roles profesionales, me encontré en una encrucijada a los 35 años cuando la empresa en la que trabajaba cerró. En ese momento, decidí dar un giro significativo en mi carrera y me sumergí en el mundo de la programación. Lo que comenzó como una necesidad se transformó en una pasión que me ha motivado a seguir aprendiendo y creciendo continuamente. Aunque mi experiencia en programación es relativamente nueva, mi dedicación y deseo de mejorar constantemente son inquebrantables. Cada día es una oportunidad para aprender algo nuevo y afianzar los conocimientos adquiridos. Mi experiencia previa en el ámbito laboral ha cultivado habilidades valiosas como la resolución de problemas, la adaptabilidad y el trabajo en equipo, las cuales aplico con entusiasmo en el desarrollo de soluciones de software. Estoy comprometido en seguir desarrollándome como programador y aportar valor en cada proyecto en el que participe. Mi objetivo es continuar explorando nuevas tecnologías, enfrentando retos y contribuyendo a proyectos innovadores.";
-  const name = "Hola 🖐️ soy David Cerezo Hernández";
-  const joke = "Desarrollador web fullstack: convirtiendo café en código y errores en ‘features’.";
-  const speed = 100; 
+  const { t } = useTranslation();
+
+  // Get the translated texts
+  const text = t('description_text');
+  const name = t('description_name');
+  const joke = t('description_joke');
+  const speed = 30; 
   const displayedText = useTypingEffect(text, speed);
-  const displayedName = useTypingEffect(name, 100);
-  const displayedJoke = useTypingEffect(joke, 150);
+  const displayedName = useTypingEffect(name, 40);
+  const displayedJoke = useTypingEffect(joke, 50);
 
   return (
     <div className="w-full flex flex-col items-center bg-gray-100 dark:bg-gray-900 rounded-2xl shadow-md p-6">

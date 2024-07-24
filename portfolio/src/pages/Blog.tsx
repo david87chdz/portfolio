@@ -1,8 +1,12 @@
+import { useTranslation } from 'react-i18next';
+
 export function Blog() {
-    return (
-        <div>
-            <h2>Blog</h2>
-            <p>Este es mi blog</p>
-        </div>
-    );
+  const { t } = useTranslation();
+
+  return (
+    <div>
+      <h2>{t('blogTitle')}</h2>
+      <p>{t('blogDescription')}</p>
+    </div>
+  );
 }

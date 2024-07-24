@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react';
 import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { useTranslation } from 'react-i18next';
 
 export const Developer = () => {
+  const { t } = useTranslation(); // Hook para traducir
   const [bioOutput, setBioOutput] = useState('');
 
   useEffect(() => {
@@ -15,13 +17,16 @@ export const Developer = () => {
       }
 
       greet() {
-        return `Hola soy ${this.name} y soy ${this.bio}`;
+        return t('greeting', { name: this.name, bio: this.bio });
       }
     }
 
-    const user = new Developer('David Cerezo Hernández', 'Desarrollador web fullstack.');
+    const user = new Developer(
+      t('name'),
+      t('bio')
+    );
     setBioOutput(user.greet());
-  }, []);
+  }, [t]);
 
   const codeString = `
   class Developer {
@@ -34,7 +39,7 @@ export const Developer = () => {
     }
 
     greet() {
-      return Hola soy {this.name} y soy {this.bio};
+      return \`Hola soy \${this.name} y soy \${this.bio}\`;
     }
   }
 
@@ -49,7 +54,7 @@ export const Developer = () => {
         {codeString}
       </SyntaxHighlighter>
       <div className="mt-4 p-4 bg-gray-100 dark:bg-gray-700 rounded-md text-sm sm:text-base">
-        <strong>Output:</strong>
+        <strong>{t('output_label')}:</strong>
         <pre className="whitespace-pre-wrap break-words text-gray-800 dark:text-gray-100">{bioOutput}</pre>
       </div>
     </div>

@@ -1,49 +1,25 @@
+
+import { useTranslation } from 'react-i18next';
 import { IoLogoJavascript } from "react-icons/io5";
 import { SiTypescript } from "react-icons/si";
-import { FaJava } from "react-icons/fa6";
-import { FaPhp } from "react-icons/fa6";
-import { FaHtml5 } from "react-icons/fa6";
-import { FaCss3Alt } from "react-icons/fa";
-import { FaSass } from "react-icons/fa6";
-import { FaAngular } from "react-icons/fa6";
-import { FaReact } from "react-icons/fa6";
-import { FaBootstrap } from "react-icons/fa";
-import { SiTailwindcss } from "react-icons/si";
-import { SiSpringboot } from "react-icons/si";
-import { FaSymfony } from "react-icons/fa6";
-import { FaNode } from "react-icons/fa";
-import { SiExpress } from "react-icons/si";
-import { SiHibernate } from "react-icons/si";
-import { DiDoctrine } from "react-icons/di";
-import { SiMysql } from "react-icons/si";
-import { SiPostgresql } from "react-icons/si";
-import { SiMariadb } from "react-icons/si";
-import { SiOracle } from "react-icons/si";
-import { SiMongodb } from "react-icons/si";
-import { FaGitAlt } from "react-icons/fa";
-import { FaGithub } from "react-icons/fa";
+import { FaJava, FaPhp, FaHtml5, FaCss3Alt, FaSass, FaAngular, FaReact, FaBootstrap, FaSymfony, FaNode, FaGitAlt, FaGithub, FaDocker, FaAws, FaLinux, FaNpm } from "react-icons/fa";
+import { SiTailwindcss, SiSpringboot, SiExpress, SiHibernate, SiMysql, SiPostgresql, SiMariadb, SiOracle, SiMongodb, SiVisualstudiocode, SiIntellijidea, SiEclipseide, SiPostman } from "react-icons/si";
+import { DiDoctrine, DiComposer } from "react-icons/di";
 import { FiGitlab } from "react-icons/fi";
-import { SiVisualstudiocode } from "react-icons/si";
-import { SiIntellijidea } from "react-icons/si";
-import { SiEclipseide } from "react-icons/si";
-import { SiPostman } from "react-icons/si";
-import { FaDocker } from "react-icons/fa";
-import { FaAws } from "react-icons/fa";
-import { FaLinux } from "react-icons/fa";
-import { FaNpm } from "react-icons/fa6";
-import { DiComposer } from "react-icons/di";
 import { TbBrandVite } from "react-icons/tb";
 
 export function Skills() {
+  const { t } = useTranslation();
+
   return (
     <div className="p-6 bg-white dark:bg-gray-800 min-h-screen flex flex-col items-center rounded-2xl shadow-md">
-      <h1 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-4 md:text-4xl">⚙️ Skills</h1>
+      <h1 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-4 md:text-4xl">{t('skillsTitle')}</h1>
       <div className="flex flex-wrap gap-6 justify-center">
-        
+
         {/* Tarjeta Lenguajes de programación */}
         <div className="bg-gray-100 dark:bg-gray-900 shadow-lg rounded-lg p-4 w-full sm:w-80 flex flex-col items-center space-y-4">
           <h2 className="text-xl font-semibold mb-4 text-gray-900 dark:text-gray-100">
-            Lenguajes de programación
+            {t('programmingLanguages')}
           </h2>
           <div className="flex flex-wrap justify-around items-center gap-4">
             <IoLogoJavascript className="text-yellow-500 text-6xl border border-gray-300 dark:border-gray-600 rounded-lg p-4 transition-transform transform hover:rotate-[360deg] duration-500" />
@@ -56,7 +32,7 @@ export function Skills() {
         {/* Tarjeta Frameworks y bibliotecas Frontend */}
         <div className="bg-gray-100 dark:bg-gray-900 shadow-lg rounded-lg p-4 w-full sm:w-80 flex flex-col items-center space-y-4">
           <h2 className="text-xl font-semibold mb-4 text-gray-900 dark:text-gray-100">
-            Frameworks y bibliotecas Frontend
+            {t('frontendFrameworks')}
           </h2>
           <div className="flex flex-wrap justify-around items-center gap-4">
             <FaAngular className="text-red-600 text-6xl border border-gray-300 dark:border-gray-600 rounded-lg p-4 transition-transform transform hover:rotate-[360deg] duration-500" />
@@ -69,7 +45,7 @@ export function Skills() {
         {/* Tarjeta Tecnologías y frameworks Backend */}
         <div className="bg-gray-100 dark:bg-gray-900 shadow-lg rounded-lg p-4 w-full sm:w-80 flex flex-col items-center space-y-4">
           <h2 className="text-xl font-semibold mb-4 text-gray-900 dark:text-gray-100">
-            Tecnologías y frameworks Backend
+            {t('backendTechnologies')}
           </h2>
           <div className="flex flex-wrap justify-around items-center gap-4">
             <SiSpringboot className="text-green-500 text-6xl border border-gray-300 dark:border-gray-600 rounded-lg p-4 transition-transform transform hover:rotate-[360deg] duration-500" />
@@ -84,7 +60,7 @@ export function Skills() {
         {/* Tarjeta Sistemas de gestión de bases de datos */}
         <div className="bg-gray-100 dark:bg-gray-900 shadow-lg rounded-lg p-4 w-full sm:w-80 flex flex-col items-center space-y-4">
           <h2 className="text-xl font-semibold mb-4 text-gray-900 dark:text-gray-100">
-            Sistemas de gestión de bases de datos
+            {t('databaseSystems')}
           </h2>
           <div className="flex flex-wrap justify-around items-center gap-4">
             <SiMysql className="text-blue-600 text-6xl border border-gray-300 dark:border-gray-600 rounded-lg p-4 transition-transform transform hover:rotate-[360deg] duration-500" />
@@ -98,7 +74,7 @@ export function Skills() {
         {/* Tarjeta Lenguajes de marcado y estilos */}
         <div className="bg-gray-100 dark:bg-gray-900 shadow-lg rounded-lg p-4 w-full sm:w-80 flex flex-col items-center space-y-4">
           <h2 className="text-xl font-semibold mb-4 text-gray-900 dark:text-gray-100">
-            Lenguajes de marcado y estilos
+            {t('markupLanguages')}
           </h2>
           <div className="flex flex-wrap justify-around items-center gap-4">
             <FaHtml5 className="text-orange-600 text-6xl border border-gray-300 dark:border-gray-600 rounded-lg p-4 transition-transform transform hover:rotate-[360deg] duration-500" />
@@ -110,7 +86,7 @@ export function Skills() {
         {/* Tarjeta Control de versiones */}
         <div className="bg-gray-100 dark:bg-gray-900 shadow-lg rounded-lg p-4 w-full sm:w-80 flex flex-col items-center space-y-4">
           <h2 className="text-xl font-semibold mb-4 text-gray-900 dark:text-gray-100">
-            Control de versiones
+            {t('versionControl')}
           </h2>
           <div className="flex flex-wrap justify-around items-center gap-4">
             <FaGitAlt className="text-orange-600 text-6xl border border-gray-300 dark:border-gray-600 rounded-lg p-4 transition-transform transform hover:rotate-[360deg] duration-500" />
@@ -122,7 +98,7 @@ export function Skills() {
         {/* Tarjeta Herramientas de desarrollo */}
         <div className="bg-gray-100 dark:bg-gray-900 shadow-lg rounded-lg p-4 w-full sm:w-80 flex flex-col items-center space-y-4">
           <h2 className="text-xl font-semibold mb-4 text-gray-900 dark:text-gray-100">
-            Herramientas de desarrollo
+            {t('developmentTools')}
           </h2>
           <div className="flex flex-wrap justify-around items-center gap-4">
             <SiVisualstudiocode className="text-blue-600 text-6xl border border-gray-300 dark:border-gray-600 rounded-lg p-4 transition-transform transform hover:rotate-[360deg] duration-500" />
