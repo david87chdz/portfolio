@@ -1,4 +1,4 @@
-import { Image } from '../components/Image';
+
 import { Description } from '../components/Description';
 import { Developer } from '../components/PortfolioCode';
 import { Social } from '../components/Social';
