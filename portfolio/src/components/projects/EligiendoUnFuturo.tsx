@@ -1,20 +1,22 @@
 import { FaAngular } from "react-icons/fa6";
 import { FaNode } from "react-icons/fa6";
 import { FaJava } from "react-icons/fa6";
-import { FaDocker } from "react-icons/fa";
+import { FaDocker, FaGithub } from "react-icons/fa";
 import { SiMysql } from "react-icons/si";
 import { SiExpress } from "react-icons/si";
 import { SiSpringboot } from "react-icons/si";
-
+import angularVideo from "../../assets/eUFuturo.mp4";
 export function EligiendoUnFuturo() {
   return (
     <div className="bg-white dark:bg-gray-800 shadow-lg rounded-lg overflow-hidden max-w-sm w-full transition-transform transform hover:scale-105">
       <div className="p-4">
-        <img
-          src="https://via.placeholder.com/300/1.jpg"
-          alt="Project"
-          className="w-full h-48 object-cover rounded-md mb-4 mx-auto" // Añadido margen horizontal y margen inferior
-        />
+      <video
+  src={angularVideo}
+  className="w-full h-48 object-cover rounded-md"
+  controls
+  loop
+  muted
+></video>
       </div>
       <div className="p-6">
         <h2 className="text-2xl font-bold mb-4 text-gray-900 dark:text-gray-100">Eligiendo un futuro</h2>
@@ -24,7 +26,7 @@ export function EligiendoUnFuturo() {
           rel="noopener noreferrer"
           className="block bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors mb-4 text-center"
         >
-          Ver código
+          Ver código <FaGithub className="inline-block ml-2" />
         </a>
         <p className="text-gray-700 dark:text-gray-300 mb-4">
           Proyecto final de ciclo

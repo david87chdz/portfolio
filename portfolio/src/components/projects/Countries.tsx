@@ -1,4 +1,4 @@
-import { FaReact } from "react-icons/fa";
+import { FaReact, FaGithub} from "react-icons/fa";
 
 export function Countries() {
   return (
@@ -16,7 +16,7 @@ export function Countries() {
           href="#"
           className="block bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors mb-4 text-center"
         >
-          Ver código
+          Ver código <FaGithub className="inline-block ml-2" />
         </a>
         <p className="text-gray-700 dark:text-gray-300 mb-4">
           Proyecto de países

@@ -1,6 +1,6 @@
 import { FaAngular } from "react-icons/fa6";
 import { FaNode } from "react-icons/fa6";
-import { FaDocker } from "react-icons/fa";
+import { FaDocker, FaGithub } from "react-icons/fa";
 import { SiPostgresql } from "react-icons/si";
 import { SiExpress } from "react-icons/si";
 import cvVideo from "./videoCv.mp4";
@@ -12,7 +12,7 @@ export function Cvitae() {
   src={cvVideo}
   className="w-full h-48 object-cover rounded-md"
   controls
-  autoPlay
+  
   loop
   muted
 ></video>
@@ -25,7 +25,7 @@ export function Cvitae() {
           rel="noopener noreferrer"
           className="block bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors mb-4 text-center"
         >
-          Ver código
+          Ver código <FaGithub className="inline-block ml-2" />
         </a>
         <p className="text-gray-700 dark:text-gray-300 mb-4">
           Currículum personal creado con Angular

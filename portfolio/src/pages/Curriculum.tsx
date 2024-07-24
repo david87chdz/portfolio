@@ -33,7 +33,7 @@ export function Curriculum() {
           }`}
           onClick={() => handleLanguageChange("es")}
         >
-          Español
+          Español 
         </button>
         <button
           className={`mx-2 px-4 py-2 rounded ${
