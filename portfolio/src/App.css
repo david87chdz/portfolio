@@ -4,10 +4,10 @@
 
 /* Estilos Base */
 :root {
-  --background-light: #f9fafb; /* Fondo claro con un toque sutil de gris y blanco */
-  --background-dark: #121212; /* Fondo oscuro profundo para el modo oscuro */
+  --background-light: #f9fafb; /* Fondo claro */
+  --background-dark: #121212; /* Fondo oscuro */
   --background-gradient-light: radial-gradient(circle, rgba(255, 255, 255, 0.9) 20%, rgba(240, 240, 240, 1) 80%);
-  --background-gradient-dark: radial-gradient(circle, rgba(18, 18, 18, 1) 20%, rgba(33, 33, 33, 1) 80%);
+  --background-gradient-dark: linear-gradient(135deg, #582a788a 0%, #004080 100%);
   --text-color-light: #333333;
   --text-color-dark: #e0e0e0;
   --primary-color: #1e90ff;
@@ -33,7 +33,6 @@ body {
   min-height: 100vh;
 }
 
-/* Modo oscuro */
 body.dark {
   background: var(--background-gradient-dark);
   color: var(--text-color-dark);
@@ -110,15 +109,15 @@ nav.dark .nav-toggle {
 
 /* Main */
 main {
-  padding: 3rem 1rem;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
+  padding: 2rem 0;
+  
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2rem;
+  
   flex: 1;
   width: 100%;
+  border-radius: 1em;
 }
 
 /* Botones */
@@ -147,6 +146,11 @@ section {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s, color 0.3s;
 }
+
+body.dark section {
+  background: var(--background-gradient-dark); /* Fondo oscuro en modo oscuro */
+}
+
 
 /* Logo */
 .logo {
@@ -210,6 +214,65 @@ section {
   max-height: 100%;
 }
 
+/* Reveal */
+.reveal {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(to bottom right, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.2)); /* Gradiente sutil */
+  transition: opacity 0.3s, transform 0.3s;
+}
 
+.reveal::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.05); /* Menos oscuro que antes */
+  backdrop-filter: blur(5px); /* Menos desenfoque */
+  z-index: -1;
+}
 
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 
+.reveal:not(.visible) {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+/* Parallax */
+.parallax-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.parallax-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8px);
+  z-index: -1;
+}
+
+.parallax-item img {
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+.parallax-item:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+}
+
+.parallax-item:hover img {
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+}

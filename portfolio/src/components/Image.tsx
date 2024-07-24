@@ -1,12 +1,17 @@
+import reactImage from './../assets/fotoCv.jpeg';
+
+// Asegúrate de importar tu imagen correctamente
+
 export function Image() {
-    return (
-      <div className="flex justify-center mb-8">
-        <img
-          src="https://avatars.githubusercontent.com/u/58707302?v=4"
-          alt="David Cerezo"
-          className="rounded-full w-32 h-32 border-4 border-blue-500 shadow-lg"
-        />
-      </div>
-    );
-  }
+  return (
+    <div className="flex justify-content-lg-start mb-8">
+      <img
+        src={reactImage}
+        alt="David Cerezo"
+        className="w-48 h-auto border-4 border-gray-300 dark:border-gray-600 shadow-xl rounded-lg"
+      />
+    </div>
+  );
+}
+
   

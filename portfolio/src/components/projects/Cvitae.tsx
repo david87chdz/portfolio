@@ -3,13 +3,13 @@ import { FaNode } from "react-icons/fa6";
 import { FaDocker } from "react-icons/fa";
 import { SiPostgresql } from "react-icons/si";
 import { SiExpress } from "react-icons/si";
-
+import cvVideo from "./videoCv.mp4";
 export function Cvitae() {
   return (
     <div className="bg-white dark:bg-gray-800 shadow-lg rounded-lg overflow-hidden max-w-sm w-full transition-transform transform hover:scale-105">
       <div className="p-4"> {/* Contenedor para márgenes */}
       <video
-  src="videoCv.mp4"
+  src={cvVideo}
   className="w-full h-48 object-cover rounded-md"
   controls
   autoPlay

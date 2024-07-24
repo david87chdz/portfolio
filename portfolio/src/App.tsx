@@ -1,4 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
+import { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import { Nav } from './components/shared/Nav';
 import { Footer } from './components/shared/Footer';
 import { Home } from './pages/Home';
@@ -6,14 +9,18 @@ import { Projects as ProjectsPage } from './pages/Projects';
 import { Curriculum } from './pages/Curriculum';
 import { Blog } from './pages/Blog';
 import { useVisits } from './hooks/useVisits';
-//import { useTheme } from './hooks/useTheme';
 import './App.css';
 import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
 import 'react-pdf/dist/esm/Page/TextLayer.css';
 
 function App() {
   const { visits } = useVisits();
- 
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Duración de la animación en milisegundos
+    });
+  }, []);
 
   return (
     <div>
