@@ -1,18 +1,25 @@
-import { useTypingEffect } from "../hooks/useTyppingEffect";
+import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useTypingEffect } from "../hooks/useTyppingEffect";
 import reactImage from './../assets/fotoCv.jpeg';
 
 export function Description() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const [text, setText] = useState(t('description_text', { defaultValue: '' }));
+  const [name, setName] = useState(t('description_name', { defaultValue: '' }));
+  const [joke, setJoke] = useState(t('description_joke', { defaultValue: '' }));
 
-  // Get the translated texts
-  const text = t('description_text');
-  const name = t('description_name');
-  const joke = t('description_joke');
-  const speed = 30; 
-  const displayedText = useTypingEffect(text, speed);
+  // Get the typing effect hooks
+  const displayedText = useTypingEffect(text, 30);
   const displayedName = useTypingEffect(name, 40);
   const displayedJoke = useTypingEffect(joke, 50);
+
+  // Effect to handle language change
+  useEffect(() => {
+    setText(t('description_text', { defaultValue: '' }));
+    setName(t('description_name', { defaultValue: '' }));
+    setJoke(t('description_joke', { defaultValue: '' }));
+  }, [t, i18n.language]);
 
   return (
     <div className="w-full flex flex-col items-center bg-gray-100 dark:bg-gray-900 rounded-2xl shadow-md p-6">

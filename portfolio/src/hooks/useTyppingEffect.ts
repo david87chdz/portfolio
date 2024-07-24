@@ -1,21 +1,24 @@
 import { useState, useEffect } from 'react';
 
-export const useTypingEffect = (text: string, speed: number) => {
+export function useTypingEffect(text: string, speed: number) {
   const [displayedText, setDisplayedText] = useState('');
-  const [index, setIndex] = useState(0);
 
   useEffect(() => {
-    if (index < text.length) {
-      const timer = setTimeout(() => {
-        setDisplayedText((prev) => prev + text[index]);
-        setIndex((prev) => prev + 1);
-      }, speed);
+    if (!text) return; 
 
-      return () => clearTimeout(timer);
-    }
-  }, [index, text, speed]);
+    let index = -1;
+    setDisplayedText(''); 
+
+    const intervalId = setInterval(() => {
+      setDisplayedText((prev) => prev + text[index]);
+      index += 1;
+      if (index >= text.length-1) {
+        clearInterval(intervalId);
+      }
+    }, speed);
+
+    return () => clearInterval(intervalId);
+  }, [text, speed]);
 
   return displayedText;
-};
-
-
+}
