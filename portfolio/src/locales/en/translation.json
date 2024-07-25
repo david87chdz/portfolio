@@ -1,16 +1,16 @@
 {
-    "curriculum": "Curriculum",
-    "download_pdf": "Download PDF",
-    "spanish": "Spanish",
-    "english": "English",
-    "home": "Home",
-    "projects": "Projects",
-    "cv": "CVitae",
-    "blog": "Blog",
-    "toggle_theme": "Toggle Theme",
-    "dark_theme": "Switch to Dark Theme",
-    "light_theme": "Switch to Light Theme",
-    "countries": "Countries",
+  "curriculum": "Curriculum",
+  "download_pdf": "Download PDF",
+  "spanish": "Spanish",
+  "english": "English",
+  "home": "Home",
+  "projects": "Projects",
+  "cv": "CVitae",
+  "blog": "Blog",
+  "toggle_theme": "Toggle Theme",
+  "dark_theme": "Dark",
+  "light_theme": "Light",
+  "countries": "Countries",
   "view_code": "View Code",
   "project_description": "Country project",
   "created_with_react": "Created with React using the",
@@ -52,6 +52,8 @@
   "socialTitle": "Social",
   "blogTitle": "Blog",
   "blogDescription": "This is my blog",
-  "projectsTitle": "Projects"
-  }
-  
+  "projectsTitle": "Projects",
+  "blogUnderConstructionTitle": "Blog Under Construction",
+  "blogUnderConstructionDescription": "Our blog is currently under construction. Stay tuned for updates!",
+  "comingSoon": "Coming Soon"
+}

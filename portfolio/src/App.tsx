@@ -1,5 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { Nav } from './components/shared/Nav';
@@ -15,6 +15,7 @@ import 'react-pdf/dist/esm/Page/TextLayer.css';
 
 function App() {
   const { visits } = useVisits();
+  const [navOpen, setNavOpen] = useState(false); // Initialize as false
 
   useEffect(() => {
     AOS.init({
@@ -22,10 +23,18 @@ function App() {
     });
   }, []);
 
+  const handleNavClose = () => {
+    setNavOpen(false);
+  };
+
   return (
     <div>
-      <Nav />
-      <main className="p-4 max-w-screen-xl mx-auto flex-1 md:p-6">
+      <Nav onClose={handleNavClose} />
+      <main
+        className={`p-4 max-w-screen-xl mx-auto flex-1 transition-all 
+          ${navOpen ? 'pt-96 sm:pt-96 md:pt-300 lg:pt-32' : 'pt-36 sm:pt-36 md:pt-20 lg:pt-15'}
+        `}
+      >
         <p className="text-center text-lg mb-4">Número de visitas: {visits}</p>
         <Routes>
           <Route path="/" element={<Home />} />

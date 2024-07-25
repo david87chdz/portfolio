@@ -20,7 +20,7 @@ export function PDFViewer({ fileUrl }: { fileUrl: string }) {
       >
         <Page
           pageNumber={pageNumber}
-          scale={1.3} 
+          scale={1.2} 
         />
       </Document>
     </div>

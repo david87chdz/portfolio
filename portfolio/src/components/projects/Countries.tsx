@@ -1,6 +1,6 @@
 import { FaReact, FaGithub } from "react-icons/fa";
 import { useTranslation } from 'react-i18next';
-
+import imageRepo from "./repositorio.png";
 export function Countries() {
   const { t } = useTranslation(); // Hook de traducción
 
@@ -8,7 +8,7 @@ export function Countries() {
     <div className="bg-white dark:bg-gray-800 shadow-lg rounded-lg overflow-hidden max-w-sm w-full transition-transform transform hover:scale-105">
       <div className="p-4"> {/* Contenedor para márgenes */}
         <img
-          src="https://via.placeholder.com/300/1.jpg"
+          src={imageRepo} // Ruta de la imagen
           alt={t('country_image_alt')} // Traducción para el texto alternativo
           className="w-full h-48 object-cover rounded-md mb-4" // Añadido margen inferior
         />
@@ -17,12 +17,14 @@ export function Countries() {
         <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-gray-100">
           {t('countries')}
         </h3>
-        <a
-          href="#"
-          className="block bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors mb-4 text-center"
-        >
-          {t('view_code')} <FaGithub className="inline-block ml-2" />
-        </a>
+        <div className="flex justify-center mb-4">
+          <button
+            className="bg-blue-700 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors"
+            onClick={() => window.open('#', '_blank')} // Puedes ajustar el comportamiento aquí
+          >
+            {t('view_code')} <FaGithub className="inline-block ml-2" />
+          </button>
+        </div>
         <p className="text-gray-700 dark:text-gray-300 mb-4">
           {t('project_description')}
           <br />

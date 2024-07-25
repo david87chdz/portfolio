@@ -21,14 +21,14 @@ export function Cvitae() {
         <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-gray-100">
           {t('cv_title')}
         </h3>
-        <a
-          href="https://github.com/david87chdz/cvAngular"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="block bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors mb-4 text-center"
-        >
-          {t('view_code')} <FaGithub className="inline-block ml-2" />
-        </a>
+        <div className="flex justify-center mb-4">
+          <button
+            onClick={() => window.open("https://github.com/david87chdz/cvAngular", "_blank")}
+            className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors flex items-center cursor-pointer"
+          >
+            {t('view_code')} <FaGithub className="inline-block ml-2" />
+          </button>
+        </div>
         <p className="text-gray-700 dark:text-gray-300 mb-4">
           {t('cv_description')}
           <br />

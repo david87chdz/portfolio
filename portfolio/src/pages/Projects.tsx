@@ -7,17 +7,19 @@ export function Projects() {
   const { t } = useTranslation();
 
   return (
-    <div className="py-16 px-8 bg-gray-100 dark:bg-gray-800 min-h-screen flex items-center justify-center projects">
-      <div className="container mx-auto p-8 bg-gray-100 dark:bg-gray-900 shadow-lg rounded-lg max-w-4xl">
-        <h2 className="text-3xl font-bold mb-8 text-center text-gray-800 dark:text-gray-100">
-          💻 {t('projectsTitle')}
-        </h2>
-        <div className="flex flex-col items-center gap-12">
-          <EligiendoUnFuturo />
-          <Cvitae />
-          <Countries />
+    <main className="w-full flex flex-col items-center bg-gray-200 dark:bg-gray-800 shadow-lg dark:shadow-5xl rounded-2xl">
+      <section className="w-full flex flex-col items-center py-8 px-4">
+        <div data-aos="fade-up" data-aos-delay="200" className="my-6 w-full max-w-4xl flex flex-col items-center p-6 rounded-2xl shadow-2xl bg-white dark:bg-gray-900">
+          <h2 className="text-3xl font-bold mb-8 text-center text-gray-900 dark:text-gray-100 md:text-4xl">
+            💻 {t('projectsTitle')}
+          </h2>
+          <div className="flex flex-col items-center gap-12">
+            <EligiendoUnFuturo />
+            <Cvitae />
+            <Countries />
+          </div>
         </div>
-      </div>
-    </div>
+      </section>
+    </main>
   );
 }

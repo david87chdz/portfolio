@@ -1,5 +1,4 @@
-import { FaAngular, FaNode, FaJava } from "react-icons/fa";
-import { FaDocker, FaGithub } from "react-icons/fa";
+import { FaAngular, FaNode, FaJava, FaDocker, FaGithub } from "react-icons/fa";
 import { SiMysql, SiExpress, SiSpringboot } from "react-icons/si";
 import { useTranslation } from 'react-i18next';
 import angularVideo from "../../assets/eUFuturo.mp4";
@@ -15,6 +14,7 @@ export function EligiendoUnFuturo() {
           className="w-full h-48 object-cover rounded-md"
           controls
           loop
+          autoPlay
           muted
         ></video>
       </div>
@@ -22,14 +22,14 @@ export function EligiendoUnFuturo() {
         <h2 className="text-2xl font-bold mb-4 text-gray-900 dark:text-gray-100">
           {t('future_title')}
         </h2>
-        <a
-          href="https://github.com/david87chdz/Eligiendo-un-futuro"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="block bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors mb-4 text-center"
-        >
-          {t('view_code')} <FaGithub className="inline-block ml-2" />
-        </a>
+        <div className="flex justify-center mb-4">
+          <button
+            onClick={() => window.open("https://github.com/david87chdz/Eligiendo-un-futuro", "_blank")}
+            className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors flex items-center cursor-pointer"
+          >
+            {t('view_code')} <FaGithub className="inline-block ml-2" />
+          </button>
+        </div>
         <p className="text-gray-700 dark:text-gray-300 mb-4">
           {t('project_description')}
           <br />

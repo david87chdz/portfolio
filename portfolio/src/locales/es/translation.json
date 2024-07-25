@@ -8,8 +8,8 @@
   "cv": "CVitae",
   "blog": "Blog",
   "toggle_theme": "Cambiar Tema",
-  "dark_theme": "Cambiar a Tema Oscuro",
-  "light_theme": "Cambiar a Tema Claro",
+  "dark_theme": "Oscuro",
+  "light_theme": "Claro",
   "countries": "Países",
   "view_code": "Ver Código",
   "project_description": "Proyecto de países",
@@ -52,5 +52,8 @@
   "socialTitle": "Redes Sociales",
   "blogTitle": "Blog",
   "blogDescription": "Este es mi blog",
-  "projectsTitle": "Proyectos"
+  "projectsTitle": "Proyectos",
+  "blogUnderConstructionTitle": "Blog en Construcción",
+  "blogUnderConstructionDescription": "Nuestro blog está actualmente en construcción. ¡Mantente atento a las actualizaciones!",
+  "comingSoon": "Próximamente"
 }
