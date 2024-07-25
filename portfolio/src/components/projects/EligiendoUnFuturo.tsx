@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import angularVideo from "../../assets/eUFuturo.mp4";
 
 export function EligiendoUnFuturo() {
-  const { t } = useTranslation(); // Hook de traducción
+  const { t } = useTranslation(); 
 
   return (
     <div className="bg-white dark:bg-gray-800 shadow-lg rounded-lg overflow-hidden max-w-sm w-full transition-transform transform hover:scale-105">

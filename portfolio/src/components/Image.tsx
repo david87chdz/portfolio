@@ -1,7 +1,5 @@
 import reactImage from './../assets/fotoCv.jpeg';
 
-// Asegúrate de importar tu imagen correctamente
-
 export function Image() {
   return (
     <div className="flex justify-content-lg-start mb-8">

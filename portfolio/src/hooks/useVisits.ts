@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 
-// To do:
-// Change the localStorage for a cookie or a field in a database
+
 export function useVisits() {   
  const currentVisits = localStorage.getItem('visits') || 0;
   const [visits, setVisits] = useState(0);

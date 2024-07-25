@@ -9,12 +9,12 @@ export function Description() {
   const [name, setName] = useState(t('description_name', { defaultValue: '' }));
   const [joke, setJoke] = useState(t('description_joke', { defaultValue: '' }));
 
-  // Get the typing effect hooks
+  
   const displayedText = useTypingEffect(text, 30);
   const displayedName = useTypingEffect(name, 40);
   const displayedJoke = useTypingEffect(joke, 50);
 
-  // Effect to handle language change
+ 
   useEffect(() => {
     setText(t('description_text', { defaultValue: '' }));
     setName(t('description_name', { defaultValue: '' }));

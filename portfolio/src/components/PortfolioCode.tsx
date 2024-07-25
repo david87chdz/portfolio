@@ -4,7 +4,7 @@ import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import { useTranslation } from 'react-i18next';
 
 export const Developer = () => {
-  const { t } = useTranslation(); // Hook para traducir
+  const { t } = useTranslation(); 
   const [bioOutput, setBioOutput] = useState('');
 
   useEffect(() => {

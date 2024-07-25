@@ -4,11 +4,10 @@ import { useTranslation } from 'react-i18next';
 import cvVideo from "./videoCv.mp4";
 
 export function Cvitae() {
-  const { t } = useTranslation(); // Hook de traducción
-
+  const { t } = useTranslation(); 
   return (
     <div className="bg-white dark:bg-gray-800 shadow-lg rounded-lg overflow-hidden max-w-sm w-full transition-transform transform hover:scale-105">
-      <div className="p-4"> {/* Contenedor para márgenes */}
+      <div className="p-4"> 
         <video
           src={cvVideo}
           className="w-full h-48 object-cover rounded-md"
@@ -32,7 +31,7 @@ export function Cvitae() {
         <p className="text-gray-700 dark:text-gray-300 mb-4">
           {t('cv_description')}
           <br />
-          {t('created_with')} Angular 17, Node.js, Express, Docker y PostgreSQL
+          <br />
         </p>
         <div>
           <h4 className="text-lg font-semibold mb-3 text-gray-900 dark:text-gray-100">

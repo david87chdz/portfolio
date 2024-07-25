@@ -12,19 +12,19 @@ export function Nav({ onClose }: { onClose: () => void }) {
   const handleLanguageToggle = () => {
     const newLanguage = i18n.language === "es" ? "en" : "es";
     i18n.changeLanguage(newLanguage);
-    if (onClose) onClose(); // Close menu on language change
-    console.log(`Language changed to ${newLanguage}`); // Log language change
+    if (onClose) onClose(); 
+    console.log(`Language changed to ${newLanguage}`);
   };
 
   const handleMenuToggle = () => {
     setMenuOpen(!menuOpen);
-    console.log(`Menu is now ${!menuOpen ? "open" : "closed"}`); // Log menu state
+    console.log(`Menu is now ${!menuOpen ? "open" : "closed"}`); 
   };
 
   const handleLinkClick = () => {
-    setMenuOpen(false); // Close menu when any link is clicked
-    if (onClose) onClose(); // Ensure nav is closed in App
-    console.log("Menu closed due to link click"); // Log menu close event
+    setMenuOpen(false); 
+    if (onClose) onClose(); 
+    console.log("Menu closed due to link click");
   };
 
   return (
