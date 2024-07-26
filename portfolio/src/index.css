@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Estilos Base */
+
 :root {
   --background-color-light: #f5f5f5;
   --background-color-dark: #121212;
@@ -10,7 +10,7 @@
   --background-dark: linear-gradient(135deg, #240738dd 0%, #004080 100%);
   --text-color-light: #333333;
   --text-color-dark: #e0e0e0;
-  --primary-color: #004080; /* Un azul brillante */
+  --primary-color: #004080; 
   --secondary-color: #240738dd ;
   --nav-background-light: #ffffff;
   --nav-background-dark: #1e1e1e;
@@ -21,7 +21,7 @@
 }
 
 
-/* Estilos Globales */
+
 body {
   font-family: 'JetBrains Mono', monospace !important;
   background: var(--background-light);
@@ -34,13 +34,13 @@ body {
   min-height: 100vh;
 }
 
-/* Modo oscuro */
+
 body.dark {
   background: var(--background-dark);
   color: var(--text-color-dark);
 }
 
-/* Nav */
+
 nav {
   position: fixed;
   top: 0;
@@ -114,7 +114,7 @@ nav.dark .nav-toggle {
   }
 }
 
-/* Main */
+
 main {
   padding: 3rem 1rem;
   margin-top: 3rem;
@@ -127,7 +127,7 @@ main {
   width: 100%;
 }
 
-/* Botones */
+
 button {
   padding: 0.5rem 1rem;
   border: none;
@@ -143,7 +143,7 @@ button:hover {
   transform: scale(1.05);
 }
 
-/* Sección */
+
 section {
   width: 100%;
   max-width: 1200px;
@@ -158,7 +158,7 @@ section.dark {
   background-color: var(--card-background-dark);
 }
 
-/* Logo */
+
 .logo {
   height: 5em;
   transition: transform 0.3s, filter 0.3s;
@@ -184,7 +184,7 @@ section.dark {
   }
 }
 
-/* Ajustes para pantallas pequeñas */
+
 @media (max-width: 640px) {
   main {
     padding: 1rem;
@@ -204,7 +204,7 @@ section.dark {
   }
 }
 
-/* PDF Viewer */
+
 .pdf-viewer-container {
   margin: 20px auto;
   border: 1px solid #ddd;
@@ -218,7 +218,7 @@ section.dark {
   align-items: center;
   width: 100%;
   max-width: auto;
-  height: auto; /* Ajusta la altura según tu diseño */
+  height: auto; 
 }
 
 .react-pdf__Page {
@@ -227,7 +227,7 @@ section.dark {
 
 @media (max-width: 768px) {
   .pdf-viewer-container {
-    height: auto; /* Ajusta la altura para dispositivos móviles */
+    height: auto; 
   }
 }
 

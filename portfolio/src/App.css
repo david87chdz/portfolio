@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Estilos Base */
+
 :root {
   --background-light: #f9fafb;
   --background-dark: #121212;
@@ -20,7 +20,7 @@
   --card-background-dark: #2a2a2a;
 }
 
-/* Estilos Globales */
+
 body {
   font-family: 'Roboto', sans-serif;
   background: var(--background-gradient-light);
@@ -38,7 +38,7 @@ body.dark {
   color: var(--text-color-dark);
 }
 
-/* Nav */
+
 nav {
   width: 100%;
   background-color: var(--nav-background-light);
@@ -107,7 +107,7 @@ nav.dark .nav-toggle {
   }
 }
 
-/* Main */
+
 main {
   padding: 2rem 0;
   display: flex;
@@ -118,7 +118,7 @@ main {
   border-radius: 1em;
 }
 
-/* Botones */
+
 button {
   padding: 0.5rem 1rem;
   border: none;
@@ -134,7 +134,7 @@ button:hover {
   transform: scale(1.05);
 }
 
-/* Sección */
+
 section {
   width: 100%;
   max-width: 1200px;
@@ -151,7 +151,7 @@ body.dark section {
   background: var(--background-gradient-dark);
 }
 
-/* Logo */
+
 .logo {
   height: 5em;
   transition: transform 0.3s, filter 0.3s;
@@ -196,7 +196,6 @@ body.dark section {
   }
 }
 
-/* PDF Viewer */
 .pdf-viewer-container {
   width: 100%;
   height: 100vh;
@@ -213,7 +212,7 @@ body.dark section {
   max-height: 100%;
 }
 
-/* Reveal */
+
 .reveal {
   position: relative;
   overflow: hidden;
@@ -243,7 +242,7 @@ body.dark section {
   transform: translateY(20px);
 }
 
-/* Parallax */
+
 .parallax-item {
   position: relative;
   overflow: hidden;
