@@ -1,29 +1,25 @@
-// src/i18n.js
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
-
-// Importa tus traducciones
-import translationES from './locales/es/translation.json';
-import translationEN from './locales/en/translation.json';
-
-const resources = {
-  es: {
-    translation: translationES,
-  },
-  en: {
-    translation: translationEN,
-  },
-};
+import enTranslations from './locales/en/translation.json';
+import esTranslations from './locales/es/translation.json';
 
 i18n
-  .use(initReactI18next) // Integración con React
+  .use(initReactI18next)
   .init({
-    resources,
-    lng: 'es', // Idioma por defecto
-    fallbackLng: 'en', // Idioma de reserva
-    interpolation: {
-      escapeValue: false, // React ya escapa los valores por defecto
+    resources: {
+      en: { translation: enTranslations },
+      es: { translation: esTranslations }
     },
+    lng: 'es', // Idioma por defecto
+    fallbackLng: 'es', // Idioma de reserva
+    interpolation: { escapeValue: false },
+    react: {
+      useSuspense: true
+    }
+  }, (err) => {
+    if (err) {
+      console.error('Error initializing i18n:', err);
+    }
   });
 
 export default i18n;

@@ -4,20 +4,23 @@ export function useTypingEffect(text: string, speed: number) {
   const [displayedText, setDisplayedText] = useState('');
 
   useEffect(() => {
-    if (!text) return; 
+    if (!text) return;
 
-    let index = -1;
-    setDisplayedText(''); 
+    let index = -1; // Inicializamos en 0
+    setDisplayedText(''); // Reiniciamos el texto mostrado
 
-    const intervalId = setInterval(() => {
+    // Usamos una función que actualiza el texto mostrado
+    const updateText = () => {
       setDisplayedText((prev) => prev + text[index]);
       index += 1;
       if (index >= text.length-1) {
         clearInterval(intervalId);
       }
-    }, speed);
+    };
 
-    return () => clearInterval(intervalId);
+    const intervalId = setInterval(updateText, speed);
+
+    return () => clearInterval(intervalId); // Limpiamos el intervalo al desmontar el componente
   }, [text, speed]);
 
   return displayedText;
