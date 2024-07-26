@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -9,19 +9,32 @@ import { Projects as ProjectsPage } from './pages/Projects';
 import { Curriculum } from './pages/Curriculum';
 import { Blog } from './pages/Blog';
 import { useVisits } from './hooks/useVisits';
+import usePageVisibility from './hooks/usePageVisibility'; // Importa el hook
 import './App.css';
 import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
 import 'react-pdf/dist/esm/Page/TextLayer.css';
+import ReactGA from 'react-ga4';
+
+const TRACKING_ID = 'G-S1CFBSXQMQ'; // Reemplaza con tu ID de Google Analytics
+
+ReactGA.initialize(TRACKING_ID);
 
 function App() {
   const { visits } = useVisits();
-  const [navOpen, setNavOpen] = useState(false); // Initialize as false
+  const [navOpen, setNavOpen] = useState(false);
+  const location = useLocation();
+
+  usePageVisibility(); // Usa el hook
 
   useEffect(() => {
     AOS.init({
-      duration: 1000, // Duración de la animación en milisegundos
+      duration: 1000,
     });
   }, []);
+
+  useEffect(() => {
+    ReactGA.send({ hitType: 'pageview', page: location.pathname + location.search });
+  }, [location]);
 
   const handleNavClose = () => {
     setNavOpen(false);
