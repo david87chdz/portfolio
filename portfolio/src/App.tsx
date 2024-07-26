@@ -14,14 +14,9 @@ import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
 import 'react-pdf/dist/esm/Page/TextLayer.css';
 import ReactGA from 'react-ga4';
 
-// Asegúrate de que la variable de entorno está correctamente cargada
-const TRACKING_ID = process.env.REACT_APP_TRACKING_ID;
-console.log('Google Analytics Tracking ID:', TRACKING_ID);
-if (TRACKING_ID) {
-  ReactGA.initialize(TRACKING_ID);
-} else {
-  console.error('Google Analytics Tracking ID is not defined');
-}
+const TRACKING_ID = 'G-S1CFBSXQMQ';
+
+ReactGA.initialize(TRACKING_ID);
 
 function App() {
   const [navOpen, setNavOpen] = useState(false);
@@ -36,9 +31,7 @@ function App() {
   }, []);
 
   useEffect(() => {
-    if (TRACKING_ID) {
-      ReactGA.send({ hitType: 'pageview', page: location.pathname + location.search });
-    }
+    ReactGA.send({ hitType: 'pageview', page: location.pathname + location.search });
   }, [location]);
 
   const handleNavClose = () => {
