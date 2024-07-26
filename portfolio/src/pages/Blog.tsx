@@ -7,7 +7,6 @@ export function Blog() {
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    // Se utiliza un temporizador para simular una animación de aparición
     const timer = setTimeout(() => setVisible(true), 100);
     return () => clearTimeout(timer);
   }, []);

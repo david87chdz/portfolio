@@ -1,24 +1,26 @@
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useTypingEffect } from "../hooks/useTyppingEffect";
+import { useTypingEffect } from '../hooks/useTyppingEffect'; // Asegúrate de que el nombre del hook sea correcto
 import reactImage from './../assets/fotoCv.jpeg';
 
 export function Description() {
   const { t, i18n } = useTranslation();
-  const [text, setText] = useState(t('description_text', { defaultValue: '' }));
-  const [name, setName] = useState(t('description_name', { defaultValue: '' }));
-  const [joke, setJoke] = useState(t('description_joke', { defaultValue: '' }));
+  const [text, setText] = useState('');
+  const [name, setName] = useState('');
+  const [joke, setJoke] = useState('');
 
-  
-  const displayedText = useTypingEffect(text, 25);
-  const displayedName = useTypingEffect(name, 40);
+  const displayedName = useTypingEffect(name, 43);
+  const displayedText = useTypingEffect(text, 40);
   const displayedJoke = useTypingEffect(joke, 50);
 
- 
   useEffect(() => {
-    setText(t('description_text', { defaultValue: '' }));
-    setName(t('description_name', { defaultValue: '' }));
-    setJoke(t('description_joke', { defaultValue: '' }));
+    const descriptionName = t('description_name', { defaultValue: '' });
+    const descriptionJoke = t('description_joke', { defaultValue: '' });
+    const descriptionText = t('description_text', { defaultValue: '' });
+
+    setName(descriptionName);
+    setJoke(descriptionJoke);
+    setText(descriptionText);
   }, [t, i18n.language]);
 
   return (
@@ -34,10 +36,10 @@ export function Description() {
             &lt;{displayedName} /&gt;
           </h2>
           <p className="text-gray-700 dark:text-gray-300 text-xl md:text-2xl max-w-2xl mx-auto mb-4 italic text-left">
-            &lt; {displayedJoke} /&gt;
+            &lt;{displayedJoke} /&gt;
           </p>
           <p className="text-gray-700 dark:text-gray-300 text-base md:text-lg max-w-2xl mx-auto text-justify">
-            &lt; {displayedText} /&gt;
+            &lt;{displayedText} /&gt;
           </p>
         </div>
       </div>

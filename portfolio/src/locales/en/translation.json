@@ -1,4 +1,7 @@
 {
+  "description_text": "After 17 years of experience in various professional roles, I found myself at a crossroads at 35 when the company I was working for closed. At that moment, I decided to make a significant shift in my career and delved into the world of programming. What started as a necessity turned into a passion that has driven me to keep learning and growing continuously. Although my programming experience is relatively new, my dedication and desire to constantly improve are unwavering. Each day is an opportunity to learn something new and solidify the knowledge gained. My previous work experience has cultivated valuable skills such as problem-solving, adaptability, and teamwork, which I enthusiastically apply in software development. I am committed to continuing my development as a programmer and adding value to every project I participate in. My goal is to keep exploring new technologies, facing challenges, and contributing to innovative projects.",
+  "description_name": "Hello 🖐️ I'm David Cerezo Hernández",
+  "description_joke": "Fullstack web developer: turning coffee into code and mistakes into ‘features’.",
   "curriculum": "Curriculum",
   "download_pdf": "Download PDF",
   "spanish": "Spanish",
@@ -33,9 +36,6 @@
   "contact_body": "Body of the message",
   "copy_email": "Copy email",
   "copied": "Copied!",
-  "description_text": "After 17 years of experience in various professional roles, I found myself at a crossroads at 35 when the company I was working for closed. At that moment, I decided to make a significant shift in my career and delved into the world of programming. What started as a necessity turned into a passion that has driven me to keep learning and growing continuously. Although my programming experience is relatively new, my dedication and desire to constantly improve are unwavering. Each day is an opportunity to learn something new and solidify the knowledge gained. My previous work experience has cultivated valuable skills such as problem-solving, adaptability, and teamwork, which I enthusiastically apply in software development. I am committed to continuing my development as a programmer and adding value to every project I participate in. My goal is to keep exploring new technologies, facing challenges, and contributing to innovative projects.",
-  "description_name": "Hello 🖐️ I'm David Cerezo Hernández",
-  "description_joke": "Fullstack web developer: turning coffee into code and mistakes into ‘features’.",
   "name": "David Cerezo Hernández",
   "bio": "Fullstack web developer.",
   "greeting": "Hello, I am {{name}} and I am a {{bio}}",
