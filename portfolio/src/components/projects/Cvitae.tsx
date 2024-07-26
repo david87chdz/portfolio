@@ -13,6 +13,7 @@ export function Cvitae() {
           className="w-full h-48 object-cover rounded-md"
           controls
           loop
+          autoPlay
           muted
         ></video>
       </div>
