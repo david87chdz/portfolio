@@ -8,7 +8,6 @@ import { Home } from './pages/Home';
 import { Projects as ProjectsPage } from './pages/Projects';
 import { Curriculum } from './pages/Curriculum';
 import { Blog } from './pages/Blog';
-import { useVisits } from './hooks/useVisits';
 import usePageVisibility from './hooks/usePageVisibility'; // Importa el hook
 import './App.css';
 import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
@@ -20,7 +19,6 @@ const TRACKING_ID = 'G-S1CFBSXQMQ'; // Reemplaza con tu ID de Google Analytics
 ReactGA.initialize(TRACKING_ID);
 
 function App() {
-  const { visits } = useVisits();
   const [navOpen, setNavOpen] = useState(false);
   const location = useLocation();
 
@@ -48,7 +46,6 @@ function App() {
           ${navOpen ? 'pt-96 sm:pt-96 md:pt-300 lg:pt-32' : 'pt-36 sm:pt-36 md:pt-20 lg:pt-15'}
         `}
       >
-        <p className="text-center text-lg mb-4">Número de visitas: {visits}</p>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/projects" element={<ProjectsPage />} />

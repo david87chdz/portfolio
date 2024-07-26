@@ -1,7 +1,7 @@
 import { FaAngular, FaNode, FaDocker, FaGithub } from "react-icons/fa";
 import { SiPostgresql, SiExpress } from "react-icons/si";
 import { useTranslation } from 'react-i18next';
-import cvVideo from "./videoCv.mp4";
+import cvVideo from "../../assets/videoCv.mp4";
 
 export function Cvitae() {
   const { t } = useTranslation(); 

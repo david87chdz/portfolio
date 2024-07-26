@@ -23,7 +23,7 @@
 
 /* Estilos Globales */
 body {
-  font-family: 'Source Code Pro', monospace;
+  font-family: 'JetBrains Mono', monospace !important;
   background: var(--background-light);
   color: var(--text-color-light);
   transition: background 0.3s, color 0.3s;

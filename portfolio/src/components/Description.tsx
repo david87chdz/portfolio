@@ -10,7 +10,7 @@ export function Description() {
   const [joke, setJoke] = useState(t('description_joke', { defaultValue: '' }));
 
   
-  const displayedText = useTypingEffect(text, 30);
+  const displayedText = useTypingEffect(text, 25);
   const displayedName = useTypingEffect(name, 40);
   const displayedJoke = useTypingEffect(joke, 50);
 
