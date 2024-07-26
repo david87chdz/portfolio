@@ -1,27 +1,46 @@
 {
-  
   "description_text": "Después de 17 años de experiencia en diversos roles profesionales, me encontré en una encrucijada a los 35 años cuando la empresa en la que trabajaba cerró. En ese momento, decidí dar un giro significativo en mi carrera y me sumergí en el mundo de la programación. Lo que comenzó como una necesidad se transformó en una pasión que me ha motivado a seguir aprendiendo y creciendo continuamente. Aunque mi experiencia en programación es relativamente nueva, mi dedicación y deseo de mejorar constantemente son inquebrantables. Cada día es una oportunidad para aprender algo nuevo y afianzar los conocimientos adquiridos. Mi experiencia previa en el ámbito laboral ha cultivado habilidades valiosas como la resolución de problemas, la adaptabilidad y el trabajo en equipo, las cuales aplico con entusiasmo en el desarrollo de soluciones de software. Estoy comprometido en seguir desarrollándome como programador y aportar valor en cada proyecto en el que participe. Mi objetivo es continuar explorando nuevas tecnologías, enfrentando retos y contribuyendo a proyectos innovadores.",
   "description_name": "Hola 🖐️ soy David Cerezo Hernández",
   "description_joke": "Desarrollador web fullstack: convirtiendo café en código y errores en ‘features’.",
-
-
+  "curriculum": "Currículum",
+  "download_pdf": "Descargar PDF",
+  "spanish": "Español",
+  "english": "Inglés",
   "home": "Inicio",
   "projects": "Proyectos",
   "cv": "CVitae",
   "blog": "Blog",
-  "curriculum": "Currículum",
-  "download_pdf": "Descargar PDF",
-  "view_code": "Ver Código",
-  "more_skills": "Más...",
-  "project_description_more": "Más proyectos",
-
- 
   "toggle_theme": "Cambiar Tema",
   "dark_theme": "Oscuro",
   "light_theme": "Claro",
-
-
+  "view_code": "Ver Código",
+  "project_description_more": "Más proyectos",
+  "created_more": "Trabajando en nuevos proyectos y mejoras continuas.",
+  "more_skills": "Más...",
+  "api": "API",
+  "more_image_alt": "Imagen del repositorio",
   "skills": "Habilidades",
+  "cv_title": "Mi Currículum Vitae",
+  "view_code": "Ver Código",
+  "cv_description": "Currículum personal creado con Angular 17, Node.js, Express, Docker y PostgreSQL",
+  "created_with": "Creado con",
+  "skills": "Habilidades",
+  "future_title": "Eligiendo un futuro",
+  "view_code": "Ver Código",
+  "project_description": "Proyecto final grado superior (TFG)",
+  "created_with": "Creado con",
+  "skills": "Habilidades",
+  "footer_text": "Portfolio creado por David Cerezo Hernández.",
+  "mail": "Correo",
+  "contact_subject": "Contacto",
+  "contact_body": "Cuerpo del mensaje",
+  "copy_email": "Copiar correo",
+  "copied": "¡Copiado!",
+  "name": "David Cerezo Hernández",
+  "bio": "Desarrollador web fullstack.",
+  "greeting": "Hola soy {{name}} y soy {{bio}}",
+  "output_label": "Salida",
+  "projects_title": "💻 Proyectos",
   "skillsTitle": "⚙️ Habilidades",
   "programmingLanguages": "Lenguajes",
   "frontendFrameworks": "Frontend",
@@ -30,37 +49,13 @@
   "markupLanguages": "Marcado y estilos",
   "versionControl": "Control de versiones",
   "developmentTools": "Herramientas de desarrollo",
-
-  
-  "cv_title": "Mi Currículum Vitae",
-  "cv_description": "Currículum personal creado con Angular 17, Node.js, Express, Docker y PostgreSQL",
-  "created_with": "Creado con",
-  "future_title": "Eligiendo un futuro",
-  "project_description": "Proyecto final grado superior (TFG)",
-  
-
+  "socialTitle": "Redes Sociales",
   "blogTitle": "Blog",
   "blogDescription": "Este es mi blog",
+  "projectsTitle": "Proyectos",
   "blogUnderConstructionTitle": "Blog en Construcción",
   "blogUnderConstructionDescription": "Nuestro blog está actualmente en construcción. ¡Mantente atento a las actualizaciones!",
-  
- 
-  "goodbyeMessage": "¡Vuelve pronto 🥺!",
-  "welcomeBackMessage": "¡Bienvenido de nuevo 😊!",
   "comingSoon": "Próximamente",
-  
-
-  "mail": "Correo",
-  "contact_subject": "Contacto",
-  "contact_body": "Cuerpo del mensaje",
-  "copy_email": "Copiar correo",
-  "copied": "¡Copiado!",
-
- 
-  "name": "David Cerezo Hernández",
-  "bio": "Desarrollador web fullstack.",
-  "greeting": "Hola soy {{name}} y soy {{bio}}",
-
-
-  "footer_text": "Portfolio creado por David Cerezo Hernández."
+  "goodbyeMessage": "¡Vuelve pronto 🥺!",
+  "welcomeBackMessage": "¡Bienvenido de nuevo 😊!"
 }
