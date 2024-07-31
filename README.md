@@ -46,46 +46,30 @@ npm install
 ### Running the Aplicattion
 ```bash
 npm start
-
-Contributing
+```
+##Contributing
 Contributions are welcome! If you have suggestions for improvements or want to add features, feel free to submit a pull request.
 
-Steps to Contribute
-Fork the repository.
-Create a new branch: git checkout -b feature/your-feature-name
-Make your changes and commit them: git commit -m 'Add some feature'
-Push to the branch: git push origin feature/your-feature-name
-Open a pull request.
-License
+##License
 This project is licensed under the MIT License. See the LICENSE file for details.
 
-Contact
+##Contact
 If you have any questions or suggestions about this project, feel free to contact me via Email or visit my LinkedIn.
 
-markdown
-Copiar código
-
-### Personalización:
-
-1. **Enlaces y URLs:**
-   - Cambia `https://github.com/yourusername/your-portfolio.git` por la URL de tu repositorio.
-   - Actualiza `[Email](mailto:your-email@example.com)` con tu dirección de correo electrónico.
-   - Modifica `[LinkedIn](https://www.linkedin.com/in/your-linkedin-profile/)` con tu perfil de LinkedIn.
-
-2. **Detalles del Proyecto:**
-   - Si tu portfolio incluye características específicas que no están mencionadas, agrégalas en la sección de **Features**.
-
-3. **Licencia:**
-   - Asegúrate de incluir el archivo de licencia si lo estás utilizando y ajusta la sección de **License** si tu proyecto usa una licencia diferente.
-
-4. **Contribuciones:**
-   - Si tienes un proceso específico para recibir contribuciones o revisiones, actualiza las instrucciones según sea necesario.
-
-Este README proporciona una visión clara y profesional de tu portfolio y ofrece a los visitantes toda la información necesaria para instalar, contribuir y contactar contigo. ¡Espero que te resulte útil!
 
 
 
 
+### Personalización de Enlaces:
+
+
+2. **Enlace de Correo Electrónico:**
+   - `mailto:david87chdz@mail.com` 
+
+3. **Enlace de LinkedIn:**
+   - `https://www.linkedin.com/in/david-cerezo-hernandez/` .
+
+Asegúrate de verificar todos los enlaces y comandos para que correspondan a tu proyecto y a tu configuración actual. ¡Espero que esto te ayude a tener un README claro y profesional para tu portfolio!
 
 
 
