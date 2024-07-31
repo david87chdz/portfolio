@@ -47,29 +47,18 @@ npm install
 ```bash
 npm start
 ```
-##Contributing
+## Contributing
 Contributions are welcome! If you have suggestions for improvements or want to add features, feel free to submit a pull request.
 
-##License
+## License
 This project is licensed under the MIT License. See the LICENSE file for details.
 
-##Contact
-If you have any questions or suggestions about this project, feel free to contact me via Email or visit my LinkedIn.
+## Contact
+If you have any questions or suggestions about this project, feel free to contact me via [Email](mailto:david87chdz@mail.com) or visit my [LinkedIn](https://www.linkedin.com/in/david-cerezo-hernandez/).
 
 
 
 
-
-### Personalización de Enlaces:
-
-
-2. **Enlace de Correo Electrónico:**
-   - `mailto:david87chdz@mail.com` 
-
-3. **Enlace de LinkedIn:**
-   - `https://www.linkedin.com/in/david-cerezo-hernandez/` .
-
-Asegúrate de verificar todos los enlaces y comandos para que correspondan a tu proyecto y a tu configuración actual. ¡Espero que esto te ayude a tener un README claro y profesional para tu portfolio!
 
 
 
