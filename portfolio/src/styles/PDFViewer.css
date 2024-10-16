@@ -1,0 +1,47 @@
+.pdf-viewer-container {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    padding: 20px;
+    max-width: 100%; 
+    box-sizing: border-box;
+  }
+  
+  .pdf-navigation {
+    display: flex;
+    justify-content: center; 
+    margin-top: 10px; 
+    flex-wrap: wrap; 
+  }
+  
+  .pdf-navigation button {
+    margin: 5px; 
+    padding: 10px 15px; 
+    cursor: pointer; 
+    font-size: 1em;
+  }
+  
+  .pdf-navigation p {
+    margin-left: 10px; 
+    align-self: center; 
+    color: #333;
+  }
+  
+
+  @media (max-width: 600px) {
+    .pdf-navigation {
+      flex-direction: column; 
+      align-items: center; 
+    }
+  
+    .pdf-navigation button {
+      width: 100%; 
+      margin: 5px 0; 
+    }
+  
+    .pdf-navigation p {
+      margin-left: 0; 
+      margin-top: 10px; 
+    }
+  }
+  
