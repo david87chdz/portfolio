@@ -17,6 +17,7 @@
     "aos": "^2.3.4",
     "i18next": "^23.12.2",
     "pdfjs-dist": "^2.16.105",
+    "portfolio": "file:",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-ga": "^3.3.1",
